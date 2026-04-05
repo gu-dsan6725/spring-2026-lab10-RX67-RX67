@@ -1,5 +1,5 @@
 """
-Agent tools for search, weather, and directions.
+Agent tools for search, weather, directions, local time, and currency exchange.
 
 Each tool is a Strands @tool decorated function that the agent can invoke.
 Tools are kept in this separate module so they can be:
@@ -14,6 +14,8 @@ All tool log messages are prefixed with [Tool] for easy filtering in debug.log:
 import json
 import logging
 import time
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
 import requests
 from ddgs import DDGS
@@ -34,11 +36,80 @@ OSRM_BASE_URL = "https://router.project-osrm.org/route/v1/driving"
 OPEN_METEO_BASE_URL = "https://api.open-meteo.com/v1/forecast"
 NOMINATIM_USER_AGENT = "simple-agent-evals/1.0"
 HTTP_TIMEOUT_SECONDS = 10
+FRANKFURTER_BASE_URL = "https://api.frankfurter.app/latest"
+
+# City name (lowercase) -> IANA timezone id for get_current_time
+_CITY_TO_TIMEZONE: dict[str, str] = {
+    "tokyo": "Asia/Tokyo",
+    "new york": "America/New_York",
+    "new york city": "America/New_York",
+    "nyc": "America/New_York",
+    "manhattan": "America/New_York",
+    "brooklyn": "America/New_York",
+    "london": "Europe/London",
+    "paris": "Europe/Paris",
+    "berlin": "Europe/Berlin",
+    "sydney": "Australia/Sydney",
+    "chicago": "America/Chicago",
+    "los angeles": "America/Los_Angeles",
+    "san francisco": "America/Los_Angeles",
+    "seattle": "America/Los_Angeles",
+    "washington dc": "America/New_York",
+    "washington": "America/New_York",
+    "miami": "America/New_York",
+    "denver": "America/Denver",
+    "dubai": "Asia/Dubai",
+    "singapore": "Asia/Singapore",
+    "hong kong": "Asia/Hong_Kong",
+    "mumbai": "Asia/Kolkata",
+    "moscow": "Europe/Moscow",
+    "toronto": "America/Toronto",
+    "mexico city": "America/Mexico_City",
+    "sao paulo": "America/Sao_Paulo",
+}
 
 
 # ---------------------------------------------------------------------------
 # Private helpers (used by the public tool functions below)
 # ---------------------------------------------------------------------------
+
+
+def _resolve_city_timezone(
+    city: str
+) -> str:
+    """
+    Map a user-provided city name to an IANA timezone identifier.
+
+    Args:
+        city: City or region name (e.g. 'Tokyo', 'New York')
+
+    Returns:
+        IANA timezone string
+
+    Raises:
+        ValueError: if the city is not in the mapping
+    """
+    key = city.strip().lower()
+    if not key:
+        raise ValueError("City name is empty")
+    if key not in _CITY_TO_TIMEZONE:
+        raise ValueError(
+            f"Unknown city for timezone lookup: {city!r}. "
+            f"Try a major city (e.g. Tokyo, London, New York, Sydney)."
+        )
+    return _CITY_TO_TIMEZONE[key]
+
+
+def _format_utc_offset(
+    dt: datetime
+) -> str:
+    """Format datetime's UTC offset as +HH:MM or -HH:MM."""
+    s = dt.strftime("%z")
+    if not s or s == "+0000":
+        return "+00:00"
+    sign = s[0]
+    hh, mm = s[1:3], s[3:5]
+    return f"{sign}{hh}:{mm}"
 
 
 def _geocode_location(
@@ -281,4 +352,112 @@ def get_directions(
 
     except Exception as e:
         logger.error(f"[Tool] get_directions failed: {e}")
+        return json.dumps({"error": str(e)})
+
+
+@tool
+def get_current_time(
+    city: str
+) -> str:
+    """
+    Get the current local date and time for a supported city using its time zone.
+
+    Use this when the user asks what time it is somewhere, local time in a city,
+    or time zone information for travel planning.
+
+    Args:
+        city: City name (e.g. 'Tokyo', 'New York', 'London', 'Sydney')
+
+    Returns:
+        JSON string with local time, IANA zone id, UTC offset, and common abbreviation if available
+    """
+    try:
+        logger.info(f"[Tool] get_current_time: city='{city}'")
+        tz_name = _resolve_city_timezone(city)
+        now = datetime.now(ZoneInfo(tz_name))
+        offset = _format_utc_offset(now)
+        abbrev = now.strftime("%Z") or ""
+
+        payload = {
+            "city_query": city.strip(),
+            "timezone": tz_name,
+            "local_time": now.isoformat(timespec="seconds"),
+            "local_time_readable": now.strftime("%Y-%m-%d %H:%M:%S"),
+            "utc_offset": offset,
+            "abbreviation": abbrev,
+        }
+        logger.info(f"[Tool] get_current_time: {city} -> {payload['local_time_readable']} ({tz_name})")
+        return json.dumps(payload, indent=2)
+
+    except ValueError as e:
+        logger.error(f"[Tool] get_current_time: {e}")
+        return json.dumps({"error": str(e)})
+    except Exception as e:
+        logger.error(f"[Tool] get_current_time failed: {e}")
+        return json.dumps({"error": str(e)})
+
+
+@tool
+def get_exchange_rate(
+    from_currency: str,
+    to_currency: str,
+    amount: float = 1.0
+) -> str:
+    """
+    Get a foreign exchange rate and converted amount using the Frankfurter API (no API key).
+
+    Use this when the user asks for exchange rates, currency conversion, or how much
+    one currency is worth in another. Use standard ISO 4217 codes (USD, EUR, GBP, JPY).
+
+    Args:
+        from_currency: Base currency code (e.g. 'USD')
+        to_currency: Target currency code (e.g. 'EUR', 'JPY')
+        amount: Amount of base currency to convert (default 1.0)
+
+    Returns:
+        JSON string with rate, converted amount, date, and currencies
+    """
+    try:
+        base = from_currency.strip().upper()
+        target = to_currency.strip().upper()
+        logger.info(f"[Tool] get_exchange_rate: {base} -> {target}, amount={amount}")
+
+        response = requests.get(
+            FRANKFURTER_BASE_URL,
+            params={"from": base, "to": target},
+            timeout=HTTP_TIMEOUT_SECONDS,
+        )
+        response.raise_for_status()
+        data = response.json()
+
+        rates = data.get("rates") or {}
+        if target not in rates:
+            logger.warning(f"[Tool] get_exchange_rate: no rate for {target} in response")
+            return json.dumps({
+                "error": f"No exchange rate returned for {target}. Check currency codes.",
+                "raw": data,
+            })
+
+        rate = float(rates[target])
+        converted = round(float(amount) * rate, 4)
+
+        payload = {
+            "from_currency": base,
+            "to_currency": target,
+            "amount": float(amount),
+            "exchange_rate": rate,
+            "converted_amount": converted,
+            "rate_date": data.get("date"),
+        }
+        logger.info(
+            f"[Tool] get_exchange_rate: 1 {base} = {rate} {target} "
+            f"({amount} {base} -> {converted} {target})"
+        )
+        return json.dumps(payload, indent=2)
+
+    except requests.RequestException as e:
+        logger.error(f"[Tool] get_exchange_rate API error: {e}")
+        return json.dumps({"error": f"Exchange rate service unavailable: {e}"})
+    except Exception as e:
+        logger.error(f"[Tool] get_exchange_rate failed: {e}")
         return json.dumps({"error": str(e)})

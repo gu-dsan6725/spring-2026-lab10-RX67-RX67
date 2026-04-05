@@ -74,6 +74,46 @@ def _create_judge_client() -> OpenAI:
     )
 
 
+def make_closedqa_scorer(client: OpenAI):
+    """
+    Braintrust passes ``input``, ``output``, and ``expected`` to scorers.
+
+    Autoevals' ClosedQA template requires a ``{{criteria}}`` variable. Without it,
+    Chevron logs ``Could not find key 'criteria'`` once per case and the judge
+    sees an empty criterion. We use the dataset's ``expected`` rubric as
+    ``criteria``.
+    """
+
+    inner = ClosedQA(model=EVAL_JUDGE_MODEL, client=client)
+
+    def closedqa_scorer(
+        input: str,
+        output: str,
+        expected: Optional[str] = None,
+        metadata: Optional[dict] = None,
+        **kwargs: Any,
+    ) -> dict:
+        rubric = (
+            expected.strip()
+            if isinstance(expected, str) and expected.strip()
+            else "The submission should correctly and completely address the user's request."
+        )
+        result = inner.eval(
+            output=output,
+            expected=rubric,
+            input=input if input is not None else "",
+            criteria=rubric,
+        )
+        return {
+            "name": "ClosedQA",
+            "score": result.score,
+            "metadata": dict(result.metadata) if result.metadata else {},
+        }
+
+    closedqa_scorer.__name__ = "closedqa_scorer"
+    return closedqa_scorer
+
+
 def _load_dataset(
     dataset_path: str
 ) -> list[dict]:
@@ -854,7 +894,7 @@ def main() -> None:
     #   ScopeAwareness: Does the agent decline out-of-scope requests?
     all_scorers = [
         Factuality(model=EVAL_JUDGE_MODEL, client=judge_client),
-        ClosedQA(model=EVAL_JUDGE_MODEL, client=judge_client),
+        make_closedqa_scorer(judge_client),
         tool_selection_scorer,
         response_completeness_scorer,
         latency_scorer,

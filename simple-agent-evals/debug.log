@@ -1,0 +1,1833 @@
+2026-04-05 22:38:38,314,p20876,{eval.py:869},INFO,Starting Simple Agent Evaluations
+2026-04-05 22:38:38,315,p20876,{eval.py:136},INFO,Loaded 25 test cases from dataset.json
+2026-04-05 22:38:38,315,p20876,{eval.py:874},INFO,Loaded 25 test cases
+2026-04-05 22:38:38,400,p20876,{eval.py:920},INFO,Running Braintrust evaluation...
+Experiment main-1775428719 is running at https://www.braintrust.dev/app/gu/p/simple-agent-evals/experiments/main-1775428719
+2026-04-05 22:38:38,794,p20876,{eval.py:563},INFO,Running agent for test case: How long does it take to drive from Arlington VA to Georgeto...
+2026-04-05 22:38:39,042,p20876,{agent.py:109},INFO,Creating Strands agent with search, weather, and directions tools
+2026-04-05 22:38:39,042,p20876,{agent.py:82},INFO,Setting up Braintrust observability
+2026-04-05 22:38:39,043,p20876,{agent.py:98},INFO,Braintrust observability configured for project: project_name:simple-agent-evals
+2026-04-05 22:38:39,045,p20876,{agent.py:60},INFO,Loaded system prompt from /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/simple-agent-evals/prompts/system_prompt.txt (602 chars)
+2026-04-05 22:38:39,086,p20876,{agent.py:132},INFO,Agent created successfully
+2026-04-05 22:38:39,086,p20876,{eval.py:156},INFO,Running agent on: How long does it take to drive from Arlington VA to Georgetown University?...
+2026-04-05 22:38:39,087,p20876,{metrics.py:557},INFO,Creating Strands MetricsClient
+2026-04-05 22:38:39,826,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:38:39,890,p20876,{tools.py:230},INFO,[Tool] get_directions: 'Arlington VA' -> 'Georgetown University'
+2026-04-05 22:38:39,890,p20876,{tools.py:56},INFO,[Tool] Geocoding location: Arlington VA
+2026-04-05 22:38:39,937,p20876,{tools.py:75},INFO,[Tool] Geocoded 'Arlington VA' to: Whole Foods Market, 2700, Wilson Boulevard, Lyon Village, Clarendon, Arlington County, Virginia, 22201, United States
+2026-04-05 22:38:40,938,p20876,{tools.py:56},INFO,[Tool] Geocoding location: Georgetown University
+2026-04-05 22:38:40,981,p20876,{tools.py:75},INFO,[Tool] Geocoded 'Georgetown University' to: Georgetown University, 3700, O Street Northwest, Georgetown, Ward 2, Washington, District of Columbia, 20057, United States
+2026-04-05 22:38:51,264,p20876,{tools.py:283},ERROR,[Tool] get_directions failed: HTTPSConnectionPool(host='router.project-osrm.org', port=443): Read timed out. (read timeout=10)
+2026-04-05 22:38:51,932,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/pydantic/main.py:464: UserWarning: Pydantic serializer warnings:
+  PydanticSerializationUnexpectedValue(Expected `ParsedTextBlock[TypeVar]` - serialized value may not be as expected [field_name='content', input_value=ParsedTextBlock(citations...xt', parsed_output=None), input_type=ParsedTextBlock])
+  PydanticSerializationUnexpectedValue(Expected `ThinkingBlock` - serialized value may not be as expected [field_name='content', input_value=ParsedTextBlock(citations...xt', parsed_output=None), input_type=ParsedTextBlock])
+  PydanticSerializationUnexpectedValue(Expected `RedactedThinkingBlock` - serialized value may not be as expected [field_name='content', input_value=ParsedTextBlock(citations...xt', parsed_output=None), input_type=ParsedTextBlock])
+  PydanticSerializationUnexpectedValue(Expected `ToolUseBlock` - serialized value may not be as expected [field_name='content', input_value=ParsedTextBlock(citations...xt', parsed_output=None), input_type=ParsedTextBlock])
+  PydanticSerializationUnexpectedValue(Expected `ServerToolUseBlock` - serialized value may not be as expected [field_name='content', input_value=ParsedTextBlock(citations...xt', parsed_output=None), input_type=ParsedTextBlock])
+  PydanticSerializationUnexpectedValue(Expected `WebSearchToolResultBlock` - serialized value may not be as expected [field_name='content', input_value=ParsedTextBlock(citations...xt', parsed_output=None), input_type=ParsedTextBlock])
+  return self.__pydantic_serializer__.to_python(
+2026-04-05 22:38:54,144,p20876,{eval.py:167},INFO,Agent responded in 15.1s, tools used: ['get_directions']
+2026-04-05 22:38:54,144,p20876,{eval.py:563},INFO,Running agent for test case: What is the current weather in Washington DC?...
+2026-04-05 22:38:54,144,p20876,{agent.py:109},INFO,Creating Strands agent with search, weather, and directions tools
+2026-04-05 22:38:54,144,p20876,{agent.py:82},INFO,Setting up Braintrust observability
+2026-04-05 22:38:54,145,p20876,{__init__.py:567},WARNING,Overriding of current TracerProvider is not allowed
+2026-04-05 22:38:54,146,p20876,{agent.py:98},INFO,Braintrust observability configured for project: project_name:simple-agent-evals
+2026-04-05 22:38:54,147,p20876,{agent.py:60},INFO,Loaded system prompt from /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/simple-agent-evals/prompts/system_prompt.txt (602 chars)
+2026-04-05 22:38:54,180,p20876,{agent.py:132},INFO,Agent created successfully
+2026-04-05 22:38:54,180,p20876,{eval.py:156},INFO,Running agent on: What is the current weather in Washington DC?...
+2026-04-05 22:38:55,034,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:38:55,062,p20876,{tools.py:176},INFO,[Tool] get_weather: location='Washington DC'
+2026-04-05 22:38:55,062,p20876,{tools.py:56},INFO,[Tool] Geocoding location: Washington DC
+2026-04-05 22:38:55,105,p20876,{tools.py:75},INFO,[Tool] Geocoded 'Washington DC' to: Washington, District of Columbia, United States
+2026-04-05 22:38:55,515,p20876,{tools.py:205},INFO,[Tool] get_weather: Washington DC -> 59.4F
+2026-04-05 22:38:56,375,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:38:57,248,p20876,{eval.py:167},INFO,Agent responded in 3.1s, tools used: ['get_weather']
+2026-04-05 22:38:57,249,p20876,{eval.py:563},INFO,Running agent for test case: What are the top tourist attractions in Paris?...
+2026-04-05 22:38:57,249,p20876,{agent.py:109},INFO,Creating Strands agent with search, weather, and directions tools
+2026-04-05 22:38:57,249,p20876,{agent.py:82},INFO,Setting up Braintrust observability
+2026-04-05 22:38:57,250,p20876,{__init__.py:567},WARNING,Overriding of current TracerProvider is not allowed
+2026-04-05 22:38:57,250,p20876,{agent.py:98},INFO,Braintrust observability configured for project: project_name:simple-agent-evals
+2026-04-05 22:38:57,252,p20876,{agent.py:60},INFO,Loaded system prompt from /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/simple-agent-evals/prompts/system_prompt.txt (602 chars)
+2026-04-05 22:38:57,302,p20876,{agent.py:132},INFO,Agent created successfully
+2026-04-05 22:38:57,302,p20876,{eval.py:156},INFO,Running agent on: What are the top tourist attractions in Paris?...
+2026-04-05 22:38:57,917,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:38:58,005,p20876,{tools.py:148},INFO,[Tool] duckduckgo_search: query='top tourist attractions in Paris', max_results=10
+2026-04-05 22:38:58,192,p20876,{lib.rs:404},INFO,response: https://en.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=top%20tourist%20attractions%20in%20Paris 200
+2026-04-05 22:38:58,380,p20876,{lib.rs:404},INFO,response: https://grokipedia.com/api/typeahead?query=top+tourist+attractions+in+Paris&limit=1 200
+2026-04-05 22:38:59,200,p20876,{lib.rs:404},INFO,response: https://html.duckduckgo.com/html/ 200
+2026-04-05 22:38:59,202,p20876,{tools.py:153},INFO,[Tool] duckduckgo_search: found 10 results
+2026-04-05 22:39:00,057,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:39:03,801,p20876,{eval.py:167},INFO,Agent responded in 6.5s, tools used: ['duckduckgo_search']
+2026-04-05 22:39:03,801,p20876,{eval.py:563},INFO,Running agent for test case: I am planning a trip from New York City to Boston. How far i...
+2026-04-05 22:39:03,801,p20876,{agent.py:109},INFO,Creating Strands agent with search, weather, and directions tools
+2026-04-05 22:39:03,801,p20876,{agent.py:82},INFO,Setting up Braintrust observability
+2026-04-05 22:39:03,802,p20876,{__init__.py:567},WARNING,Overriding of current TracerProvider is not allowed
+2026-04-05 22:39:03,802,p20876,{agent.py:98},INFO,Braintrust observability configured for project: project_name:simple-agent-evals
+2026-04-05 22:39:03,804,p20876,{agent.py:60},INFO,Loaded system prompt from /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/simple-agent-evals/prompts/system_prompt.txt (602 chars)
+2026-04-05 22:39:03,835,p20876,{agent.py:132},INFO,Agent created successfully
+2026-04-05 22:39:03,835,p20876,{eval.py:156},INFO,Running agent on: I am planning a trip from New York City to Boston. How far is it and what is the...
+2026-04-05 22:39:03,842,p20876,{base_events.py:1821},ERROR,Task exception was never retrieved
+future: <Task finished name='Task-38' coro=<AsyncClient.aclose() done, defined at /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/streams/tls.py", line 241, in aclose
+    await self.transport_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1329, in aclose
+    self._transport.close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 1211, in close
+    super().close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2026-04-05 22:39:03,846,p20876,{base_events.py:1821},ERROR,Task exception was never retrieved
+future: <Task finished name='Task-39' coro=<AsyncClient.aclose() done, defined at /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/streams/tls.py", line 241, in aclose
+    await self.transport_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1329, in aclose
+    self._transport.close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 1211, in close
+    super().close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2026-04-05 22:39:04,541,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:39:04,782,p20876,{tools.py:230},INFO,[Tool] get_directions: 'New York City' -> 'Boston'
+2026-04-05 22:39:04,782,p20876,{tools.py:56},INFO,[Tool] Geocoding location: New York City
+2026-04-05 22:39:04,782,p20876,{tools.py:176},INFO,[Tool] get_weather: location='Boston'
+2026-04-05 22:39:04,782,p20876,{tools.py:56},INFO,[Tool] Geocoding location: Boston
+2026-04-05 22:39:04,856,p20876,{tools.py:75},INFO,[Tool] Geocoded 'New York City' to: New York, United States
+2026-04-05 22:39:04,858,p20876,{tools.py:75},INFO,[Tool] Geocoded 'Boston' to: Boston, Suffolk County, Massachusetts, United States
+2026-04-05 22:39:05,268,p20876,{tools.py:205},INFO,[Tool] get_weather: Boston -> 51.4F
+2026-04-05 22:39:05,858,p20876,{tools.py:56},INFO,[Tool] Geocoding location: Boston
+2026-04-05 22:39:05,900,p20876,{tools.py:75},INFO,[Tool] Geocoded 'Boston' to: Boston, Suffolk County, Massachusetts, United States
+2026-04-05 22:39:16,742,p20876,{tools.py:283},ERROR,[Tool] get_directions failed: HTTPSConnectionPool(host='router.project-osrm.org', port=443): Read timed out. (read timeout=10)
+2026-04-05 22:39:17,359,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:39:20,072,p20876,{eval.py:167},INFO,Agent responded in 16.2s, tools used: ['get_directions', 'get_weather']
+2026-04-05 22:39:20,072,p20876,{eval.py:563},INFO,Running agent for test case: What is the weather in Tokyo right now?...
+2026-04-05 22:39:20,072,p20876,{agent.py:109},INFO,Creating Strands agent with search, weather, and directions tools
+2026-04-05 22:39:20,073,p20876,{agent.py:82},INFO,Setting up Braintrust observability
+2026-04-05 22:39:20,074,p20876,{__init__.py:567},WARNING,Overriding of current TracerProvider is not allowed
+2026-04-05 22:39:20,074,p20876,{agent.py:98},INFO,Braintrust observability configured for project: project_name:simple-agent-evals
+2026-04-05 22:39:20,076,p20876,{agent.py:60},INFO,Loaded system prompt from /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/simple-agent-evals/prompts/system_prompt.txt (602 chars)
+2026-04-05 22:39:20,107,p20876,{agent.py:132},INFO,Agent created successfully
+2026-04-05 22:39:20,107,p20876,{eval.py:156},INFO,Running agent on: What is the weather in Tokyo right now?...
+2026-04-05 22:39:20,789,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:39:20,843,p20876,{tools.py:176},INFO,[Tool] get_weather: location='Tokyo'
+2026-04-05 22:39:20,843,p20876,{tools.py:56},INFO,[Tool] Geocoding location: Tokyo
+2026-04-05 22:39:20,904,p20876,{tools.py:75},INFO,[Tool] Geocoded 'Tokyo' to: 東京都, 日本
+2026-04-05 22:39:21,316,p20876,{tools.py:205},INFO,[Tool] get_weather: Tokyo -> 57.9F
+2026-04-05 22:39:22,695,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:39:23,794,p20876,{eval.py:167},INFO,Agent responded in 3.7s, tools used: ['get_weather']
+2026-04-05 22:39:23,795,p20876,{eval.py:563},INFO,Running agent for test case: How do I get from the White House to the Lincoln Memorial?...
+2026-04-05 22:39:23,795,p20876,{agent.py:109},INFO,Creating Strands agent with search, weather, and directions tools
+2026-04-05 22:39:23,795,p20876,{agent.py:82},INFO,Setting up Braintrust observability
+2026-04-05 22:39:23,796,p20876,{__init__.py:567},WARNING,Overriding of current TracerProvider is not allowed
+2026-04-05 22:39:23,796,p20876,{agent.py:98},INFO,Braintrust observability configured for project: project_name:simple-agent-evals
+2026-04-05 22:39:23,798,p20876,{agent.py:60},INFO,Loaded system prompt from /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/simple-agent-evals/prompts/system_prompt.txt (602 chars)
+2026-04-05 22:39:23,829,p20876,{agent.py:132},INFO,Agent created successfully
+2026-04-05 22:39:23,829,p20876,{eval.py:156},INFO,Running agent on: How do I get from the White House to the Lincoln Memorial?...
+2026-04-05 22:39:24,477,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:39:24,544,p20876,{tools.py:230},INFO,[Tool] get_directions: 'White House, Washington DC' -> 'Lincoln Memorial, Washington DC'
+2026-04-05 22:39:24,544,p20876,{tools.py:56},INFO,[Tool] Geocoding location: White House, Washington DC
+2026-04-05 22:39:24,857,p20876,{tools.py:75},INFO,[Tool] Geocoded 'White House, Washington DC' to: White House, 1600, Pennsylvania Avenue Northwest, Downtown, Ward 2, Washington, District of Columbia, 20500, United States
+2026-04-05 22:39:25,859,p20876,{tools.py:56},INFO,[Tool] Geocoding location: Lincoln Memorial, Washington DC
+2026-04-05 22:39:26,076,p20876,{tools.py:75},INFO,[Tool] Geocoded 'Lincoln Memorial, Washington DC' to: Lincoln Memorial, Lincoln Steps, Ward 2, Washington, District of Columbia, 20418, United States
+2026-04-05 22:39:36,336,p20876,{tools.py:283},ERROR,[Tool] get_directions failed: HTTPSConnectionPool(host='router.project-osrm.org', port=443): Read timed out. (read timeout=10)
+2026-04-05 22:39:37,619,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:39:41,047,p20876,{eval.py:167},INFO,Agent responded in 17.2s, tools used: ['get_directions']
+2026-04-05 22:39:41,047,p20876,{eval.py:563},INFO,Running agent for test case: What is the distance from Los Angeles to San Francisco and w...
+2026-04-05 22:39:41,047,p20876,{agent.py:109},INFO,Creating Strands agent with search, weather, and directions tools
+2026-04-05 22:39:41,047,p20876,{agent.py:82},INFO,Setting up Braintrust observability
+2026-04-05 22:39:41,048,p20876,{__init__.py:567},WARNING,Overriding of current TracerProvider is not allowed
+2026-04-05 22:39:41,048,p20876,{agent.py:98},INFO,Braintrust observability configured for project: project_name:simple-agent-evals
+2026-04-05 22:39:41,050,p20876,{agent.py:60},INFO,Loaded system prompt from /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/simple-agent-evals/prompts/system_prompt.txt (602 chars)
+2026-04-05 22:39:41,082,p20876,{agent.py:132},INFO,Agent created successfully
+2026-04-05 22:39:41,082,p20876,{eval.py:156},INFO,Running agent on: What is the distance from Los Angeles to San Francisco and what are some good st...
+2026-04-05 22:39:42,233,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:39:42,263,p20876,{tools.py:230},INFO,[Tool] get_directions: 'Los Angeles' -> 'San Francisco'
+2026-04-05 22:39:42,263,p20876,{tools.py:56},INFO,[Tool] Geocoding location: Los Angeles
+2026-04-05 22:39:42,307,p20876,{tools.py:75},INFO,[Tool] Geocoded 'Los Angeles' to: Los Angeles, Los Angeles County, California, United States
+2026-04-05 22:39:43,308,p20876,{tools.py:56},INFO,[Tool] Geocoding location: San Francisco
+2026-04-05 22:39:43,350,p20876,{tools.py:75},INFO,[Tool] Geocoded 'San Francisco' to: San Francisco, California, United States
+2026-04-05 22:39:53,614,p20876,{tools.py:283},ERROR,[Tool] get_directions failed: HTTPSConnectionPool(host='router.project-osrm.org', port=443): Read timed out. (read timeout=10)
+2026-04-05 22:39:54,372,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:39:54,962,p20876,{tools.py:148},INFO,[Tool] duckduckgo_search: query='Los Angeles to San Francisco distance stops along the way', max_results=5
+2026-04-05 22:39:55,018,p20876,{lib.rs:404},INFO,response: https://en.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=Los%20Angeles%20to%20San%20Francisco%20distance%20stops%20along%20the%20way 200
+2026-04-05 22:39:55,110,p20876,{lib.rs:404},INFO,response: https://grokipedia.com/api/typeahead?query=Los+Angeles+to+San+Francisco+distance+stops+along+the+way&limit=1 200
+2026-04-05 22:39:55,461,p20876,{lib.rs:404},INFO,response: https://www.mojeek.com/search?q=Los+Angeles+to+San+Francisco+distance+stops+along+the+way 403
+2026-04-05 22:39:55,535,p20876,{lib.rs:404},INFO,response: https://search.yahoo.com/search;_ylt=G3EwkCp1E-EDuEmsAfPan7X3;_ylu=mmXzfWYkgtI0Vi8fXOcwIE-czIkzJUsroAYI-CrpAASBy4c?p=Los+Angeles+to+San+Francisco+distance+stops+along+the+way 200
+2026-04-05 22:39:56,989,p20876,{lib.rs:404},INFO,response: https://html.duckduckgo.com/html/ 200
+2026-04-05 22:39:56,994,p20876,{tools.py:153},INFO,[Tool] duckduckgo_search: found 5 results
+2026-04-05 22:39:58,005,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:40:01,221,p20876,{eval.py:167},INFO,Agent responded in 20.1s, tools used: ['get_directions', 'duckduckgo_search']
+2026-04-05 22:40:01,221,p20876,{eval.py:563},INFO,Running agent for test case: What is the capital of Australia?...
+2026-04-05 22:40:01,221,p20876,{agent.py:109},INFO,Creating Strands agent with search, weather, and directions tools
+2026-04-05 22:40:01,221,p20876,{agent.py:82},INFO,Setting up Braintrust observability
+2026-04-05 22:40:01,223,p20876,{__init__.py:567},WARNING,Overriding of current TracerProvider is not allowed
+2026-04-05 22:40:01,223,p20876,{agent.py:98},INFO,Braintrust observability configured for project: project_name:simple-agent-evals
+2026-04-05 22:40:01,225,p20876,{agent.py:60},INFO,Loaded system prompt from /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/simple-agent-evals/prompts/system_prompt.txt (602 chars)
+2026-04-05 22:40:01,256,p20876,{agent.py:132},INFO,Agent created successfully
+2026-04-05 22:40:01,256,p20876,{eval.py:156},INFO,Running agent on: What is the capital of Australia?...
+2026-04-05 22:40:01,593,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:40:02,495,p20876,{eval.py:167},INFO,Agent responded in 1.2s, tools used: []
+2026-04-05 22:40:02,495,p20876,{eval.py:563},INFO,Running agent for test case: Should I bring an umbrella if I am visiting Seattle today?...
+2026-04-05 22:40:02,495,p20876,{agent.py:109},INFO,Creating Strands agent with search, weather, and directions tools
+2026-04-05 22:40:02,495,p20876,{agent.py:82},INFO,Setting up Braintrust observability
+2026-04-05 22:40:02,496,p20876,{__init__.py:567},WARNING,Overriding of current TracerProvider is not allowed
+2026-04-05 22:40:02,496,p20876,{agent.py:98},INFO,Braintrust observability configured for project: project_name:simple-agent-evals
+2026-04-05 22:40:02,498,p20876,{agent.py:60},INFO,Loaded system prompt from /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/simple-agent-evals/prompts/system_prompt.txt (602 chars)
+2026-04-05 22:40:02,529,p20876,{agent.py:132},INFO,Agent created successfully
+2026-04-05 22:40:02,529,p20876,{eval.py:156},INFO,Running agent on: Should I bring an umbrella if I am visiting Seattle today?...
+2026-04-05 22:40:02,536,p20876,{base_events.py:1821},ERROR,Task exception was never retrieved
+future: <Task finished name='Task-95' coro=<AsyncClient.aclose() done, defined at /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/streams/tls.py", line 241, in aclose
+    await self.transport_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1329, in aclose
+    self._transport.close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 1211, in close
+    super().close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2026-04-05 22:40:02,981,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:40:03,503,p20876,{tools.py:176},INFO,[Tool] get_weather: location='Seattle'
+2026-04-05 22:40:03,503,p20876,{tools.py:56},INFO,[Tool] Geocoding location: Seattle
+2026-04-05 22:40:03,546,p20876,{tools.py:75},INFO,[Tool] Geocoded 'Seattle' to: Seattle, King County, Washington, United States
+2026-04-05 22:40:03,846,p20876,{tools.py:209},ERROR,[Tool] get_weather failed: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Max retries exceeded with url: /v1/forecast?latitude=47.6038321&longitude=-122.330062&current_weather=true&current=temperature_2m%2Crelative_humidity_2m%2Cwind_speed_10m%2Cweather_code&temperature_unit=fahrenheit&wind_speed_unit=mph (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)')))
+2026-04-05 22:40:04,621,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:40:06,337,p20876,{eval.py:167},INFO,Agent responded in 3.8s, tools used: ['get_weather']
+2026-04-05 22:40:06,337,p20876,{eval.py:563},INFO,Running agent for test case: I need to drive from Chicago to Milwaukee. How long will it ...
+2026-04-05 22:40:06,338,p20876,{agent.py:109},INFO,Creating Strands agent with search, weather, and directions tools
+2026-04-05 22:40:06,338,p20876,{agent.py:82},INFO,Setting up Braintrust observability
+2026-04-05 22:40:06,339,p20876,{__init__.py:567},WARNING,Overriding of current TracerProvider is not allowed
+2026-04-05 22:40:06,339,p20876,{agent.py:98},INFO,Braintrust observability configured for project: project_name:simple-agent-evals
+2026-04-05 22:40:06,341,p20876,{agent.py:60},INFO,Loaded system prompt from /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/simple-agent-evals/prompts/system_prompt.txt (602 chars)
+2026-04-05 22:40:06,372,p20876,{agent.py:132},INFO,Agent created successfully
+2026-04-05 22:40:06,372,p20876,{eval.py:156},INFO,Running agent on: I need to drive from Chicago to Milwaukee. How long will it take and what is the...
+2026-04-05 22:40:07,128,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:40:07,290,p20876,{tools.py:230},INFO,[Tool] get_directions: 'Chicago' -> 'Milwaukee'
+2026-04-05 22:40:07,291,p20876,{tools.py:56},INFO,[Tool] Geocoding location: Chicago
+2026-04-05 22:40:07,290,p20876,{tools.py:176},INFO,[Tool] get_weather: location='Milwaukee'
+2026-04-05 22:40:07,291,p20876,{tools.py:56},INFO,[Tool] Geocoding location: Milwaukee
+2026-04-05 22:40:07,362,p20876,{tools.py:75},INFO,[Tool] Geocoded 'Chicago' to: Chicago, South Chicago Township, Cook County, Illinois, United States
+2026-04-05 22:40:07,362,p20876,{tools.py:75},INFO,[Tool] Geocoded 'Milwaukee' to: Milwaukee, Milwaukee County, Wisconsin, United States
+2026-04-05 22:40:08,364,p20876,{tools.py:56},INFO,[Tool] Geocoding location: Milwaukee
+2026-04-05 22:40:08,408,p20876,{tools.py:75},INFO,[Tool] Geocoded 'Milwaukee' to: Milwaukee, Milwaukee County, Wisconsin, United States
+2026-04-05 22:40:09,337,p20876,{tools.py:205},INFO,[Tool] get_weather: Milwaukee -> 52.3F
+2026-04-05 22:40:20,145,p20876,{tools.py:283},ERROR,[Tool] get_directions failed: HTTPSConnectionPool(host='router.project-osrm.org', port=443): Read timed out. (read timeout=10)
+2026-04-05 22:40:20,973,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+
+Tool #1: get_directions
+I apologize, but I'm currently unable to retrieve the directions due to a service timeout. However, I can provide you with general information:
+
+**Typical drive time from Arlington, VA to Georgetown University (in Washington, DC):**
+- **Distance:** Approximately 8-10 miles
+- **Drive time:** 20-35 minutes under normal traffic conditions
+
+The actual time can vary significantly depending on:
+- **Time of day** - Rush hour (7-9 AM and 4-7 PM) can add 15-20 minutes or more
+- **Traffic conditions** - DC area traffic can be heavy on weekdays
+- **Route taken** - Whether you take I-66, local roads, or other routes
+
+Would you like me to try the directions lookup again, or do you need any other information about this route?
+Tool #1: get_weather
+The current weather in Washington DC is:
+
+- **Temperature**: 59.4°F
+- **Wind Speed**: 6.6 mph
+- **Conditions**: Overcast/Cloudy
+
+It's a mild, cloudy day with light winds. You may want to bring a light jacket if you're heading outside!
+Tool #1: duckduckgo_search
+Based on the search results, here are the **top tourist attractions in Paris**:
+
+## Must-See Landmarks:
+
+1. **Eiffel Tower** - The iconic symbol of Paris and one of the most recognizable structures in the world. It's consistently at the top of visitor lists.
+
+2. **The Louvre Museum** - One of the world's largest art museums, famous for housing masterpieces like the Mona Lisa and Venus de Milo.
+
+3. **Notre-Dame Cathedral** - A stunning Gothic cathedral (currently under restoration but still viewable from outside).
+
+4. **Arc de Triomphe** - A monumental arch honoring those who fought for France, offering panoramic views of Paris.
+
+## Popular Neighborhoods & Sites:
+
+5. **Montmartre** - A charming historic neighborhood known for its artistic heritage, Sacré-Cœur Basilica, and bohemian atmosphere.
+
+6. **Le Marais** - A historic district with medieval streets, galleries, shops, and historic sites.
+
+7. **Place des Vosges** - A beautiful residential square that served as the prototype for European squares.
+
+## Other Notable Attractions:
+
+8. **Paris Catacombs** - Underground tunnels containing historical ossuary sites.
+
+9. **Champs-Élysées** - The famous avenue lined with shops, cafes, and restaurants.
+
+10. **Disneyland Paris** - One of Europe's most visited attractions.
+
+## Pro Tips:
+- Paris consistently ranks as the world's most appealing city for tourism
+- Book tickets in advance when possible to skip long queues
+- Explore the café culture and local dining experiences
+- Consider visiting during off-peak seasons if you want to avoid crowds
+
+Would you like more specific information about any of these attractions?
+Tool #1: get_directions
+
+Tool #2: get_weather
+I was able to get the weather information for Boston, but encountered a technical issue retrieving the driving directions. Let me provide you with what I found:
+
+**Weather in Boston:**
+- **Temperature:** 51.4°F
+- **Wind Speed:** 4.4 mph
+- **Conditions:** Drizzle/Light Rain (weather code 55 indicates light rain or drizzle)
+
+**Distance and Driving Time:**
+While I couldn't retrieve the exact directions at the moment due to a technical issue, I can tell you that the distance from New York City to Boston is approximately **215 miles** and typically takes about **3.5 to 4 hours** of driving time, depending on traffic conditions and the specific route taken (most commonly via I-95 North or I-91 North).
+
+**Trip Recommendations:**
+- The weather in Boston is cool and a bit wet, so pack a light jacket or rain jacket
+- Plan for typical Northeast Corridor traffic, especially if traveling during rush hours
+- Consider breaking up the drive with a rest stop halfway through
+
+Would you like me to try retrieving the directions again, or do you need any other information for your trip?
+Tool #1: get_weather
+Here's the current weather in Tokyo:
+
+- **Temperature:** 57.9°F (approximately 14°C)
+- **Wind Speed:** 0.5 mph (very light winds)
+- **Conditions:** Clear skies (weather code 0)
+- **Humidity:** Data not available
+
+It's a cool, clear day in Tokyo with minimal wind - nice weather for getting around the city!
+Tool #1: get_directions
+I apologize for the technical difficulty with the directions service. However, I can provide you with helpful information about getting from the White House to the Lincoln Memorial:
+
+**Distance & Time:**
+- **Distance:** Approximately 1.2-1.5 miles
+- **Walking time:** About 25-30 minutes
+- **Driving time:** About 10-15 minutes (depending on traffic)
+
+**Route Options:**
+
+1. **Walking (Most Popular):** This is one of the most scenic walks in DC:
+   - Head west from the White House on Pennsylvania Avenue or E Street NW
+   - Continue through the National Mall area
+   - Head toward the Lincoln Memorial at the west end of the National Mall
+   - The entire route is along major tourist pathways with iconic views
+
+2. **Public Transportation:**
+   - Take the Metro (WMATA) from Metro Center station or other nearby stations
+   - The closest Metro station to the Lincoln Memorial is the Smithsonian Station on the Blue/Orange lines
+   - Or walk to a nearby Metro station
+
+3. **Driving:**
+   - From the White House, head west on Constitution Avenue NW or Independence Avenue SW
+   - Follow signs to the Lincoln Memorial
+   - Parking is available in nearby parking areas (though it can be limited during peak times)
+
+The walking route is highly recommended as it takes you through the heart of Washington DC and past many important monuments and museums along the National Mall!
+Tool #1: get_directions
+Let me search for this information for you:
+Tool #2: duckduckgo_search
+Based on my search results, here's the information about the Los Angeles to San Francisco trip:
+
+## Distance
+**382-383 miles** (approximately 614-615 kilometers)
+
+## Driving Time
+- **Direct route (I-5):** 5.5-6 hours in normal traffic
+- **Scenic route (Highway 1/101):** 6-7+ hours, but with multiple stops, plan for 3-4 days
+
+## Good Stops Along the Way
+
+The most popular route is Highway 1 (Pacific Coast Highway/PCH) and Highway 101, which offers scenic coastal views. Some of the best stops include:
+
+1. **Santa Monica & Malibu** - Iconic California coastal towns near LA
+2. **Santa Clarita** - A good early stop
+3. **Big Sur** - Famous for spectacular coastal scenery
+4. **San Jose** - Major city about halfway
+5. **Oakland** - Just before reaching San Francisco
+
+**Note:** If you take I-5 (the fastest route), it's more direct but less scenic. The Pacific Coast Highway route is much more scenic and popular for road trips, offering beautiful coastal views and charming towns, though it takes longer.
+
+For the most enjoyable experience, most travelers recommend allowing 3-4 days for the scenic route to fully enjoy the stops and scenery along the Pacific Coast Highway!The capital of Australia is **Canberra**.
+
+Canberra was purpose-built as the nation's capital city and was chosen as a compromise between rivals Sydney and Melbourne. It's located in the Australian Capital Territory (ACT) in southeastern Australia and became the capital in 1927.I'll check the current weather in Seattle for you.
+Tool #1: get_weather
+I apologize, but I'm having trouble accessing the weather data at the moment. However, I can tell you that **Seattle is known for frequent rain and overcast skies**, especially depending on the season. 
+
+**My recommendation:** It's generally a safe bet to bring an umbrella when visiting Seattle, as the city is famous for its rainy weather. Even if rain isn't in the immediate forecast, Seattle residents often carry an umbrella as a precaution.
+
+If you'd like, you could also check:
+- Local weather websites like Weather.com or the National Weather Service
+- Your phone's weather app for real-time conditions
+
+Would you like me to search for Seattle's weather forecast using another method?
+Tool #1: get_directions
+
+Tool #2: get_weather
+I was able to get the weather information for Milwaukee, but the directions service had a temporary issue. Let me provide you with what I found:
+
+**Weather in Milwaukee:**
+- Temperature: 52.3°F
+- Wind Speed: 11.5 mph
+- Conditions2026-04-05 22:40:22,788,p20876,{eval.py:167},INFO,Agent responded in 16.4s, tools used: ['get_directions', 'get_weather']
+2026-04-05 22:40:22,788,p20876,{eval.py:563},INFO,Running agent for test case: What are the latest developments in quantum computing?...
+2026-04-05 22:40:22,788,p20876,{agent.py:109},INFO,Creating Strands agent with search, weather, and directions tools
+2026-04-05 22:40:22,788,p20876,{agent.py:82},INFO,Setting up Braintrust observability
+2026-04-05 22:40:22,791,p20876,{__init__.py:567},WARNING,Overriding of current TracerProvider is not allowed
+2026-04-05 22:40:22,792,p20876,{agent.py:98},INFO,Braintrust observability configured for project: project_name:simple-agent-evals
+2026-04-05 22:40:22,794,p20876,{agent.py:60},INFO,Loaded system prompt from /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/simple-agent-evals/prompts/system_prompt.txt (602 chars)
+2026-04-05 22:40:22,840,p20876,{agent.py:132},INFO,Agent created successfully
+2026-04-05 22:40:22,840,p20876,{eval.py:156},INFO,Running agent on: What are the latest developments in quantum computing?...
+2026-04-05 22:40:23,459,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:40:23,518,p20876,{tools.py:148},INFO,[Tool] duckduckgo_search: query='latest developments quantum computing 2024', max_results=5
+2026-04-05 22:40:23,527,p20876,{lib.rs:404},INFO,response: https://en.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=latest%20developments%20quantum%20computing%202024 200
+2026-04-05 22:40:23,578,p20876,{lib.rs:404},INFO,response: https://grokipedia.com/api/typeahead?query=latest+developments+quantum+computing+2024&limit=1 200
+2026-04-05 22:40:23,827,p20876,{lib.rs:404},INFO,response: https://www.google.com/search?q=latest+developments+quantum+computing+2024&filter=1&start=0&hl=en-US&lr=lang_en&cr=countryUS 403
+2026-04-05 22:40:24,372,p20876,{lib.rs:404},INFO,response: https://search.brave.com/search?q=latest+developments+quantum+computing+2024&source=web 200
+2026-04-05 22:40:24,383,p20876,{tools.py:153},INFO,[Tool] duckduckgo_search: found 5 results
+2026-04-05 22:40:25,133,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:40:27,776,p20876,{eval.py:167},INFO,Agent responded in 4.9s, tools used: ['duckduckgo_search']
+2026-04-05 22:40:27,776,p20876,{eval.py:563},INFO,Running agent for test case: How far is it from the Pentagon to Dulles Airport?...
+2026-04-05 22:40:27,776,p20876,{agent.py:109},INFO,Creating Strands agent with search, weather, and directions tools
+2026-04-05 22:40:27,776,p20876,{agent.py:82},INFO,Setting up Braintrust observability
+2026-04-05 22:40:27,778,p20876,{__init__.py:567},WARNING,Overriding of current TracerProvider is not allowed
+2026-04-05 22:40:27,778,p20876,{agent.py:98},INFO,Braintrust observability configured for project: project_name:simple-agent-evals
+2026-04-05 22:40:27,780,p20876,{agent.py:60},INFO,Loaded system prompt from /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/simple-agent-evals/prompts/system_prompt.txt (602 chars)
+2026-04-05 22:40:27,812,p20876,{agent.py:132},INFO,Agent created successfully
+2026-04-05 22:40:27,812,p20876,{eval.py:156},INFO,Running agent on: How far is it from the Pentagon to Dulles Airport?...
+2026-04-05 22:40:28,472,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:40:28,495,p20876,{tools.py:230},INFO,[Tool] get_directions: 'Pentagon' -> 'Dulles Airport'
+2026-04-05 22:40:28,495,p20876,{tools.py:56},INFO,[Tool] Geocoding location: Pentagon
+2026-04-05 22:40:28,537,p20876,{tools.py:75},INFO,[Tool] Geocoded 'Pentagon' to: Pentagon, Tunnel to LL, Arlington, Arlington County, Virginia, 20310, United States
+2026-04-05 22:40:29,538,p20876,{tools.py:56},INFO,[Tool] Geocoding location: Dulles Airport
+2026-04-05 22:40:29,579,p20876,{tools.py:75},INFO,[Tool] Geocoded 'Dulles Airport' to: Washington Dulles International Airport, 1, Saarinen Circle, Dulles, Loudoun County, Virginia, 20166, United States
+2026-04-05 22:40:40,294,p20876,{tools.py:283},ERROR,[Tool] get_directions failed: HTTPSConnectionPool(host='router.project-osrm.org', port=443): Read timed out. (read timeout=10)
+2026-04-05 22:40:40,876,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:40:41,380,p20876,{tools.py:230},INFO,[Tool] get_directions: 'Pentagon, Arlington VA' -> 'Dulles International Airport, Herndon VA'
+2026-04-05 22:40:41,380,p20876,{tools.py:56},INFO,[Tool] Geocoding location: Pentagon, Arlington VA
+2026-04-05 22:40:41,825,p20876,{tools.py:75},INFO,[Tool] Geocoded 'Pentagon, Arlington VA' to: Pentagon, Tunnel to LL, Arlington, Arlington County, Virginia, 20310, United States
+2026-04-05 22:40:42,826,p20876,{tools.py:56},INFO,[Tool] Geocoding location: Dulles International Airport, Herndon VA
+2026-04-05 22:40:43,310,p20876,{tools.py:283},ERROR,[Tool] get_directions failed: Could not find location: Dulles International Airport, Herndon VA
+2026-04-05 22:40:44,056,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:40:44,479,p20876,{tools.py:230},INFO,[Tool] get_directions: 'Pentagon' -> 'Dulles'
+2026-04-05 22:40:44,479,p20876,{tools.py:56},INFO,[Tool] Geocoding location: Pentagon
+2026-04-05 22:40:44,519,p20876,{tools.py:75},INFO,[Tool] Geocoded 'Pentagon' to: Pentagon, Tunnel to LL, Arlington, Arlington County, Virginia, 20310, United States
+2026-04-05 22:40:45,521,p20876,{tools.py:56},INFO,[Tool] Geocoding location: Dulles
+2026-04-05 22:40:45,936,p20876,{tools.py:75},INFO,[Tool] Geocoded 'Dulles' to: Dulles, Loudoun County, Virginia, 20102, United States
+2026-04-05 22:40:56,346,p20876,{tools.py:283},ERROR,[Tool] get_directions failed: HTTPSConnectionPool(host='router.project-osrm.org', port=443): Read timed out. (read timeout=10)
+2026-04-05 22:40:57,126,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:40:58,945,p20876,{eval.py:167},INFO,Agent responded in 31.1s, tools used: ['get_directions']
+2026-04-05 22:40:58,945,p20876,{eval.py:563},INFO,Running agent for test case: I want to plan a weekend in Miami. What is the weather like ...
+2026-04-05 22:40:58,945,p20876,{agent.py:109},INFO,Creating Strands agent with search, weather, and directions tools
+2026-04-05 22:40:58,945,p20876,{agent.py:82},INFO,Setting up Braintrust observability
+2026-04-05 22:40:58,946,p20876,{__init__.py:567},WARNING,Overriding of current TracerProvider is not allowed
+2026-04-05 22:40:58,946,p20876,{agent.py:98},INFO,Braintrust observability configured for project: project_name:simple-agent-evals
+2026-04-05 22:40:58,948,p20876,{agent.py:60},INFO,Loaded system prompt from /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/simple-agent-evals/prompts/system_prompt.txt (602 chars)
+2026-04-05 22:40:58,980,p20876,{agent.py:132},INFO,Agent created successfully
+2026-04-05 22:40:58,980,p20876,{eval.py:156},INFO,Running agent on: I want to plan a weekend in Miami. What is the weather like and what are the bes...
+2026-04-05 22:40:58,990,p20876,{base_events.py:1821},ERROR,Task exception was never retrieved
+future: <Task finished name='Task-151' coro=<AsyncClient.aclose() done, defined at /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/streams/tls.py", line 241, in aclose
+    await self.transport_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1329, in aclose
+    self._transport.close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 1211, in close
+    super().close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2026-04-05 22:40:58,992,p20876,{base_events.py:1821},ERROR,Task exception was never retrieved
+future: <Task finished name='Task-152' coro=<AsyncClient.aclose() done, defined at /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/streams/tls.py", line 241, in aclose
+    await self.transport_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1329, in aclose
+    self._transport.close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 1211, in close
+    super().close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2026-04-05 22:40:58,995,p20876,{base_events.py:1821},ERROR,Task exception was never retrieved
+future: <Task finished name='Task-153' coro=<AsyncClient.aclose() done, defined at /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/streams/tls.py", line 241, in aclose
+    await self.transport_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1329, in aclose
+    self._transport.close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 1211, in close
+    super().close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2026-04-05 22:40:58,998,p20876,{base_events.py:1821},ERROR,Task exception was never retrieved
+future: <Task finished name='Task-154' coro=<AsyncClient.aclose() done, defined at /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/streams/tls.py", line 241, in aclose
+    await self.transport_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1329, in aclose
+    self._transport.close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 1211, in close
+    super().close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2026-04-05 22:40:59,000,p20876,{base_events.py:1821},ERROR,Task exception was never retrieved
+future: <Task finished name='Task-155' coro=<AsyncClient.aclose() done, defined at /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/streams/tls.py", line 241, in aclose
+    await self.transport_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1329, in aclose
+    self._transport.close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 1211, in close
+    super().close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2026-04-05 22:40:59,002,p20876,{base_events.py:1821},ERROR,Task exception was never retrieved
+future: <Task finished name='Task-156' coro=<AsyncClient.aclose() done, defined at /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/streams/tls.py", line 241, in aclose
+    await self.transport_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1329, in aclose
+    self._transport.close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 1211, in close
+    super().close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2026-04-05 22:40:59,006,p20876,{base_events.py:1821},ERROR,Task exception was never retrieved
+future: <Task finished name='Task-157' coro=<AsyncClient.aclose() done, defined at /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/streams/tls.py", line 241, in aclose
+    await self.transport_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1329, in aclose
+    self._transport.close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 1211, in close
+    super().close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2026-04-05 22:40:59,712,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:41:00,306,p20876,{tools.py:176},INFO,[Tool] get_weather: location='Miami'
+2026-04-05 22:41:00,306,p20876,{tools.py:56},INFO,[Tool] Geocoding location: Miami
+2026-04-05 22:41:00,307,p20876,{tools.py:148},INFO,[Tool] duckduckgo_search: query='best things to do in Miami', max_results=5
+2026-04-05 22:41:00,315,p20876,{lib.rs:404},INFO,response: https://en.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=best%20things%20to%20do%20in%20Miami 200
+2026-04-05 22:41:00,354,p20876,{tools.py:75},INFO,[Tool] Geocoded 'Miami' to: Miami, Miami-Dade County, Florida, United States
+2026-04-05 22:41:00,371,p20876,{lib.rs:404},INFO,response: https://grokipedia.com/api/typeahead?query=best+things+to+do+in+Miami&limit=1 200
+2026-04-05 22:41:00,765,p20876,{tools.py:205},INFO,[Tool] get_weather: Miami -> 77.8F
+2026-04-05 22:41:01,140,p20876,{lib.rs:404},INFO,response: https://yandex.com/search/site/?text=best+things+to+do+in+Miami&web=1&searchid=5818065 200
+2026-04-05 22:41:01,171,p20876,{tools.py:153},INFO,[Tool] duckduckgo_search: found 5 results
+2026-04-05 22:41:01,956,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:41:05,849,p20876,{eval.py:167},INFO,Agent responded in 6.9s, tools used: ['get_weather', 'duckduckgo_search']
+2026-04-05 22:41:05,850,p20876,{eval.py:563},INFO,Running agent for test case: What is the weather in London and how does it compare to the...
+2026-04-05 22:41:05,850,p20876,{agent.py:109},INFO,Creating Strands agent with search, weather, and directions tools
+2026-04-05 22:41:05,850,p20876,{agent.py:82},INFO,Setting up Braintrust observability
+2026-04-05 22:41:05,851,p20876,{__init__.py:567},WARNING,Overriding of current TracerProvider is not allowed
+2026-04-05 22:41:05,851,p20876,{agent.py:98},INFO,Braintrust observability configured for project: project_name:simple-agent-evals
+2026-04-05 22:41:05,853,p20876,{agent.py:60},INFO,Loaded system prompt from /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/simple-agent-evals/prompts/system_prompt.txt (602 chars)
+2026-04-05 22:41:05,884,p20876,{agent.py:132},INFO,Agent created successfully
+2026-04-05 22:41:05,884,p20876,{eval.py:156},INFO,Running agent on: What is the weather in London and how does it compare to the weather in Paris ri...
+2026-04-05 22:41:06,258,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:41:06,797,p20876,{base_events.py:1821},ERROR,Task exception was never retrieved
+future: <Task finished name='Task-172' coro=<AsyncClient.aclose() done, defined at /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/streams/tls.py", line 241, in aclose
+    await self.transport_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1329, in aclose
+    self._transport.close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 1211, in close
+    super().close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2026-04-05 22:41:06,800,p20876,{base_events.py:1821},ERROR,Task exception was never retrieved
+future: <Task finished name='Task-173' coro=<AsyncClient.aclose() done, defined at /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/streams/tls.py", line 241, in aclose
+    await self.transport_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1329, in aclose
+    self._transport.close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 1211, in close
+    super().close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2026-04-05 22:41:06,802,p20876,{base_events.py:1821},ERROR,Task exception was never retrieved
+future: <Task finished name='Task-174' coro=<AsyncClient.aclose() done, defined at /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/streams/tls.py", line 241, in aclose
+    await self.transport_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1329, in aclose
+    self._transport.close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 1211, in close
+    super().close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2026-04-05 22:41:06,806,p20876,{tools.py:176},INFO,[Tool] get_weather: location='London'
+2026-04-05 22:41:06,806,p20876,{tools.py:176},INFO,[Tool] get_weather: location='Paris'
+2026-04-05 22:41:06,807,p20876,{tools.py:56},INFO,[Tool] Geocoding location: Paris
+2026-04-05 22:41:06,807,p20876,{tools.py:56},INFO,[Tool] Geocoding location: London
+2026-04-05 22:41:06,876,p20876,{tools.py:75},INFO,[Tool] Geocoded 'Paris' to: Paris, Île-de-France, France métropolitaine, France
+2026-04-05 22:41:06,879,p20876,{tools.py:75},INFO,[Tool] Geocoded 'London' to: Greater London, England, United Kingdom
+2026-04-05 22:41:07,289,p20876,{tools.py:205},INFO,[Tool] get_weather: London -> 47.6F
+2026-04-05 22:41:07,316,p20876,{tools.py:205},INFO,[Tool] get_weather: Paris -> 49.4F
+2026-04-05 22:41:08,509,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:41:10,525,p20876,{eval.py:167},INFO,Agent responded in 4.6s, tools used: ['get_weather']
+2026-04-05 22:41:10,525,p20876,{eval.py:563},INFO,Running agent for test case: How long would it take to drive from Denver to Yellowstone N...
+2026-04-05 22:41:10,525,p20876,{agent.py:109},INFO,Creating Strands agent with search, weather, and directions tools
+2026-04-05 22:41:10,525,p20876,{agent.py:82},INFO,Setting up Braintrust observability
+2026-04-05 22:41:10,526,p20876,{__init__.py:567},WARNING,Overriding of current TracerProvider is not allowed
+2026-04-05 22:41:10,526,p20876,{agent.py:98},INFO,Braintrust observability configured for project: project_name:simple-agent-evals
+2026-04-05 22:41:10,528,p20876,{agent.py:60},INFO,Loaded system prompt from /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/simple-agent-evals/prompts/system_prompt.txt (602 chars)
+2026-04-05 22:41:10,575,p20876,{agent.py:132},INFO,Agent created successfully
+2026-04-05 22:41:10,575,p20876,{eval.py:156},INFO,Running agent on: How long would it take to drive from Denver to Yellowstone National Park?...
+2026-04-05 22:41:11,207,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:41:11,229,p20876,{tools.py:230},INFO,[Tool] get_directions: 'Denver' -> 'Yellowstone National Park'
+2026-04-05 22:41:11,229,p20876,{tools.py:56},INFO,[Tool] Geocoding location: Denver
+2026-04-05 22:41:11,275,p20876,{tools.py:75},INFO,[Tool] Geocoded 'Denver' to: Denver, Colorado, United States
+2026-04-05 22:41:12,277,p20876,{tools.py:56},INFO,[Tool] Geocoding location: Yellowstone National Park
+2026-04-05 22:41:12,322,p20876,{tools.py:75},INFO,[Tool] Geocoded 'Yellowstone National Park' to: Yellowstone National Park, Wyoming, United States
+2026-04-05 22:41:23,040,p20876,{tools.py:283},ERROR,[Tool] get_directions failed: HTTPSConnectionPool(host='router.project-osrm.org', port=443): Read timed out. (read timeout=10)
+2026-04-05 22:41:23,705,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:41:26,001,p20876,{eval.py:167},INFO,Agent responded in 15.4s, tools used: ['get_directions']
+2026-04-05 22:41:26,001,p20876,{eval.py:563},INFO,Running agent for test case: What is Amazon Bedrock and what services does it offer?...
+2026-04-05 22:41:26,001,p20876,{agent.py:109},INFO,Creating Strands agent with search, weather, and directions tools
+2026-04-05 22:41:26,001,p20876,{agent.py:82},INFO,Setting up Braintrust observability
+2026-04-05 22:41:26,003,p20876,{__init__.py:567},WARNING,Overriding of current TracerProvider is not allowed
+2026-04-05 22:41:26,003,p20876,{agent.py:98},INFO,Braintrust observability configured for project: project_name:simple-agent-evals
+2026-04-05 22:41:26,005,p20876,{agent.py:60},INFO,Loaded system prompt from /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/simple-agent-evals/prompts/system_prompt.txt (602 chars)
+2026-04-05 22:41:26,037,p20876,{agent.py:132},INFO,Agent created successfully
+2026-04-05 22:41:26,037,p20876,{eval.py:156},INFO,Running agent on: What is Amazon Bedrock and what services does it offer?...
+2026-04-05 22:41:26,626,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:41:26,655,p20876,{tools.py:148},INFO,[Tool] duckduckgo_search: query='Amazon Bedrock services what is it', max_results=5
+2026-04-05 22:41:26,718,p20876,{lib.rs:404},INFO,response: https://grokipedia.com/api/typeahead?query=Amazon+Bedrock+services+what+is+it&limit=1 200
+2026-04-05 22:41:26,761,p20876,{lib.rs:404},INFO,response: https://en.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=Amazon%20Bedrock%20services%20what%20is%20it 200
+2026-04-05 22:41:26,810,p20876,{ddgs.py:198},INFO,Error in engine yahoo: DDGSException("RequestError: RequestError('error sending request for url (https://search.yahoo.com/search;_ylt=qabT8BO0gGEsuLcMJdqf3LCW;_ylu=uNhWPRgk8Tomt-DpqSFAV2hTa1gQYNpkqOif22SGrSyEhC0?p=Amazon+Bedrock+services+what+is+it)', 'https://search.yahoo.com/search;_ylt=qabT8BO0gGEsuLcMJdqf3LCW;_ylu=uNhWPRgk8Tomt-DpqSFAV2hTa1gQYNpkqOif22SGrSyEhC0?p=Amazon+Bedrock+services+what+is+it')")
+2026-04-05 22:41:27,143,p20876,{lib.rs:404},INFO,response: https://www.mojeek.com/search?q=Amazon+Bedrock+services+what+is+it 403
+2026-04-05 22:41:27,930,p20876,{lib.rs:404},INFO,response: https://yandex.com/search/site/?text=Amazon+Bedrock+services+what+is+it&web=1&searchid=9316518 200
+2026-04-05 22:41:27,959,p20876,{tools.py:153},INFO,[Tool] duckduckgo_search: found 5 results
+2026-04-05 22:41:29,061,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:41:29,573,p20876,{tools.py:148},INFO,[Tool] duckduckgo_search: query='Amazon Bedrock features capabilities models offered 2024', max_results=5
+2026-04-05 22:41:29,676,p20876,{lib.rs:404},INFO,response: https://grokipedia.com/api/typeahead?query=Amazon+Bedrock+features+capabilities+models+offered+2024&limit=1 200
+2026-04-05 22:41:29,683,p20876,{lib.rs:404},INFO,response: https://en.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=Amazon%20Bedrock%20features%20capabilities%20models%20offered%202024 200
+2026-04-05 22:41:29,914,p20876,{lib.rs:404},INFO,response: https://www.google.com/search?q=Amazon+Bedrock+features+capabilities+models+offered+2024&filter=1&start=0&hl=en-US&lr=lang_en&cr=countryUS 403
+2026-04-05 22:41:30,013,p20876,{lib.rs:404},INFO,response: https://search.yahoo.com/search;_ylt=iQ-IfcvPD_-CmoocV8aBaJ2J;_ylu=gyJhSHmT1TXxt4882TiDsNmhkPWt5kenDkwBOYXXeq7-oPM?p=Amazon+Bedrock+features+capabilities+models+offered+2024 200
+2026-04-05 22:41:30,656,p20876,{tools.py:153},INFO,[Tool] duckduckgo_search: found 5 results
+2026-04-05 22:41:31,330,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+: Clear skies
+
+**Driving Time:**
+Unfortunately, I couldn't retrieve the directions at the moment due to a technical issue. However, I can tell you that the drive from Chicago to Milwaukee is typically around **1.5 to 2 hours** depending on traffic and your exact route. The distance is approximately **90 miles** via I-94 North, which is the most direct route.
+
+Given the current weather conditions in Milwaukee are clear with mild temperatures, it should be good driving weather. Safe travels!
+Tool #1: duckduckgo_search
+Based on the latest search results, here are the key developments in quantum computing:
+
+## Recent Quantum Computing Breakthroughs (2024-2025):
+
+### 1. **More Powerful Quantum Processors**
+- Cloud platforms have introduced more powerful quantum processors, allowing businesses and researchers to experiment with quantum computing without needing to build and maintain their own hardware.
+
+### 2. **Advances in Qubit Entanglement**
+- An international team of researchers has developed a simple technique using magnets to entangle qubits (the building blocks of quantum computers), which could unlock complex capabilities.
+
+### 3. **Logical Qubits Achievement**
+- Impressive demonstrations have shown progress up to 48 logical, fully interconnected atomic qubits, representing significant progress toward practical quantum systems.
+
+### 4. **Quantum Advantage in New Fields**
+- Researchers are achieving quantum advantage in new and exciting application areas.
+
+### 5. **AI Integration & Error Correction**
+- AI-based error detection and correction algorithms are being developed to address quantum systems' susceptibility to environmental noise and interference, improving reliability and scalability.
+
+### 6. **Real-World Applications Emerging**
+- **Drug Discovery**: Quantum systems are accelerating drug discovery and enabling detailed molecular simulations
+- **Personalized Medicine**: Supporting the development of personalized medicine
+- **Financial Services**: Advanced risk modeling, portfolio optimization, and fraud detection
+
+The quantum computing field is advancing rapidly, with significant progress in both hardware capabilities and practical applications that could have transformative impacts across multiple industries.
+Tool #1: get_directions
+Let me try that again:
+Tool #2: get_directions
+Let me try with simpler location names:
+Tool #3: get_directions
+I'm experiencing technical difficulties with the directions service at the moment. However, I can provide you with this general information:
+
+**The distance from the Pentagon to Dulles International Airport is approximately 25-27 miles**, depending on the route taken. 
+
+**Driving time is typically 45 minutes to 1 hour** under normal traffic conditions, though this can vary significantly during rush hour or in heavy traffic, potentially extending to 1.5-2 hours.
+
+The most common route would take you westbound from the Pentagon in Arlington, VA, to Dulles Airport in Herndon, VA, typically via I-66 or other major routes heading toward the airport.I'll get the current weather for Miami and search for information about the best things to do there.
+Tool #1: get_weather
+
+Tool #2: duckduckgo_search
+Great! Here's what you need to know about planning a weekend in Miami:
+
+## Weather
+The current weather in Miami is **77.8°F** with light winds at **9.9 mph**. It's clear and pleasant weather - perfect for enjoying outdoor activities! This is ideal beach weather for your weekend getaway.
+
+## Best Things to Do in Miami
+
+Based on current travel guides, here are the top attractions and activities:
+
+1. **Beaches** - South Beach is the most famous, offering beautiful white sand and vibrant beach culture. Great for swimming, sunbathing, and people-watching.
+
+2. **Art Deco District** - Stroll through the historic Art Deco Historic District in South Beach, featuring stunning architecture from the 1920s-1940s.
+
+3. **Wynwood** - Experience Miami's vibrant street art and mural scene. This neighborhood is known for its colorful graffiti walls and trendy galleries.
+
+4. **National Parks & Natural Areas** - Visit the Everglades for wildlife viewing and a unique swamp ecosystem experience.
+
+5. **Museums** - Miami boasts world-class museums offering diverse collections.
+
+6. **Water Activities** - Take advantage of the water with activities like snorkeling, paddleboarding, or water sports.
+
+7. **Dining & Culture** - Explore Miami's diverse food scene with cuisines from around the world, and enjoy the vibrant nightlife.
+
+## Weekend Tips
+- Pack light, breathable clothing due to the warm weather
+- Bring sunscreen and sunglasses
+- Consider visiting the beach early to avoid crowds
+- Explore different neighborhoods like Little Havana for authentic Cuban culture
+
+Have a fantastic weekend in Miami!I'll get the current weather for both London and Paris so we can compare them.
+Tool #1: get_weather
+
+Tool #2: get_weather
+Here's the weather comparison between London and Paris:
+
+**London:**
+- Temperature: 47.6°F (approximately 8.7°C)
+- Wind Speed: 6.7 mph
+- Conditions: Clear sky
+
+**Paris:**
+- Temperature: 49.4°F (approximately 9.7°C)
+- Wind Speed: 3.0 mph
+- Conditions: Partly cloudy/overcast
+
+**Comparison:**
+- **Temperature**: Paris is slightly warmer than London by about 1.8°F (1°C)
+- **Wind**: London is windier with winds at 6.7 mph compared to Paris's calmer 3.0 mph winds
+- **Conditions**: London has clearer skies while Paris is experiencing more cloud cover
+
+Overall, both cities have similar cool weather typical of late autumn/winter, but Paris is slightly warmer and has calmer winds, while London is clearer but windier.
+Tool #1: get_directions
+I apologize for the technical difficulty. Let me provide you with the general information I know:
+
+The drive from Denver, Colorado to Yellowstone National Park typically takes approximately **7-8 hours** depending on which entrance you're heading to and your specific route. 
+
+The most common route is:
+- **Distance**: approximately 450-475 miles
+- **Driving time**: 7-8 hours (not including stops)
+- **Typical route**: I-25 North to I-80 East, then heading north through Wyoming to the park
+
+The exact time can vary based on:
+- Which entrance to Yellowstone you're visiting (North, West, South, or East entrance)
+- Traffic conditions
+- Road conditions (especially in winter)
+- Number of stops
+
+If you're planning this trip, I'd recommend adding extra time for rest stops, meals, and scenic breaks!
+Tool #1: duckduckgo_search
+Let me search for more detailed information about the specific services and features Amazon Bedrock offers.
+Tool #2: duckduckgo_search
+Based on my search results, here's a comprehensive overview of **Amazon Bedrock**:
+
+## What is Amazon Bedrock?
+
+Amazon Bedrock is a **fully managed AWS service** that provides secure, enterprise-grade access to high-performing **foundation models (FMs)** from leading AI companies. It enables organizations to build and scale generative AI applications without having to manage the underlying infrastructure.
+
+## Key Services and Features:
+
+### 1. **Foundation Model Access**
+Amazon Bedrock provides access to a broad selection of leading foundational models from companies including:
+- **Anthropic** (Claude)
+- **Cohere**
+- **Meta** (Llama models)
+- **Mistral AI**
+- **AI21 Labs**
+- **Stability AI** (for image generation)
+- **Amazon Titan** (AWS's own foundation model)
+- **Luma AI** and **Poolside** (newly added)
+
+### 2. **Core Capabilities**
+- **Generative AI Application Building**: Quickly build, test, and deploy generative AI applications
+- **Model Flexibility**: Choose from over 100 models to find the right fit for your use case
+- **Fully Managed**: No need to provision, manage, or optimize infrastructure
+- **Enterprise-Grade Security**: Built-in security and compliance features
+
+### 3. **Data and Integration Services**
+- **Data Connectivity**: Advanced integration with data sources
+- **Retrieval-Augmented Generation (RAG)**: Build RAG applications for more contextual AI responses
+- **AWS Lambda Integration**: Trigger functions for automated workflows
+- **S3 Integration**: Store and manage data
+- **Cloud2026-04-05 22:41:36,028,p20876,{eval.py:167},INFO,Agent responded in 10.0s, tools used: ['duckduckgo_search']
+2026-04-05 22:41:36,028,p20876,{eval.py:563},INFO,Running agent for test case: I am driving from Georgetown University to Baltimore Inner H...
+2026-04-05 22:41:36,028,p20876,{agent.py:109},INFO,Creating Strands agent with search, weather, and directions tools
+2026-04-05 22:41:36,028,p20876,{agent.py:82},INFO,Setting up Braintrust observability
+2026-04-05 22:41:36,029,p20876,{__init__.py:567},WARNING,Overriding of current TracerProvider is not allowed
+2026-04-05 22:41:36,029,p20876,{agent.py:98},INFO,Braintrust observability configured for project: project_name:simple-agent-evals
+2026-04-05 22:41:36,031,p20876,{agent.py:60},INFO,Loaded system prompt from /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/simple-agent-evals/prompts/system_prompt.txt (602 chars)
+2026-04-05 22:41:36,062,p20876,{agent.py:132},INFO,Agent created successfully
+2026-04-05 22:41:36,062,p20876,{eval.py:156},INFO,Running agent on: I am driving from Georgetown University to Baltimore Inner Harbor. How far is it...
+2026-04-05 22:41:36,478,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:41:37,258,p20876,{tools.py:230},INFO,[Tool] get_directions: 'Georgetown University' -> 'Baltimore Inner Harbor'
+2026-04-05 22:41:37,258,p20876,{tools.py:56},INFO,[Tool] Geocoding location: Georgetown University
+2026-04-05 22:41:37,259,p20876,{tools.py:176},INFO,[Tool] get_weather: location='Baltimore'
+2026-04-05 22:41:37,259,p20876,{tools.py:56},INFO,[Tool] Geocoding location: Baltimore
+2026-04-05 22:41:37,261,p20876,{tools.py:148},INFO,[Tool] duckduckgo_search: query='best restaurants Baltimore Inner Harbor', max_results=5
+2026-04-05 22:41:37,271,p20876,{lib.rs:404},INFO,response: https://en.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=best%20restaurants%20Baltimore%20Inner%20Harbor 200
+2026-04-05 22:41:37,333,p20876,{tools.py:75},INFO,[Tool] Geocoded 'Baltimore' to: Baltimore, Maryland, United States
+2026-04-05 22:41:37,337,p20876,{tools.py:75},INFO,[Tool] Geocoded 'Georgetown University' to: Georgetown University, 3700, O Street Northwest, Georgetown, Ward 2, Washington, District of Columbia, 20057, United States
+2026-04-05 22:41:37,348,p20876,{lib.rs:404},INFO,response: https://grokipedia.com/api/typeahead?query=best+restaurants+Baltimore+Inner+Harbor&limit=1 200
+2026-04-05 22:41:37,756,p20876,{tools.py:205},INFO,[Tool] get_weather: Baltimore -> 57.4F
+2026-04-05 22:41:38,338,p20876,{tools.py:56},INFO,[Tool] Geocoding location: Baltimore Inner Harbor
+2026-04-05 22:41:38,381,p20876,{tools.py:75},INFO,[Tool] Geocoded 'Baltimore Inner Harbor' to: Inner Harbor, Baltimore, Maryland, United States
+2026-04-05 22:41:38,772,p20876,{lib.rs:404},INFO,response: https://search.brave.com/search?q=best+restaurants+Baltimore+Inner+Harbor&source=web 200
+2026-04-05 22:41:38,792,p20876,{tools.py:153},INFO,[Tool] duckduckgo_search: found 5 results
+2026-04-05 22:41:48,639,p20876,{tools.py:283},ERROR,[Tool] get_directions failed: HTTPSConnectionPool(host='router.project-osrm.org', port=443): Read timed out. (read timeout=10)
+2026-04-05 22:41:49,391,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:41:52,612,p20876,{eval.py:167},INFO,Agent responded in 16.5s, tools used: ['get_directions', 'get_weather', 'duckduckgo_search']
+2026-04-05 22:41:52,612,p20876,{eval.py:563},INFO,Running agent for test case: What is the current temperature in Anchorage Alaska?...
+2026-04-05 22:41:52,612,p20876,{agent.py:109},INFO,Creating Strands agent with search, weather, and directions tools
+2026-04-05 22:41:52,612,p20876,{agent.py:82},INFO,Setting up Braintrust observability
+2026-04-05 22:41:52,613,p20876,{__init__.py:567},WARNING,Overriding of current TracerProvider is not allowed
+2026-04-05 22:41:52,613,p20876,{agent.py:98},INFO,Braintrust observability configured for project: project_name:simple-agent-evals
+2026-04-05 22:41:52,615,p20876,{agent.py:60},INFO,Loaded system prompt from /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/simple-agent-evals/prompts/system_prompt.txt (602 chars)
+2026-04-05 22:41:52,646,p20876,{agent.py:132},INFO,Agent created successfully
+2026-04-05 22:41:52,646,p20876,{eval.py:156},INFO,Running agent on: What is the current temperature in Anchorage Alaska?...
+2026-04-05 22:41:53,231,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:41:53,261,p20876,{tools.py:176},INFO,[Tool] get_weather: location='Anchorage, Alaska'
+2026-04-05 22:41:53,262,p20876,{tools.py:56},INFO,[Tool] Geocoding location: Anchorage, Alaska
+2026-04-05 22:41:53,339,p20876,{tools.py:75},INFO,[Tool] Geocoded 'Anchorage, Alaska' to: Anchorage, Alaska, United States
+2026-04-05 22:41:53,759,p20876,{tools.py:205},INFO,[Tool] get_weather: Anchorage, Alaska -> 37.5F
+2026-04-05 22:41:54,382,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:41:55,161,p20876,{eval.py:167},INFO,Agent responded in 2.5s, tools used: ['get_weather']
+2026-04-05 22:41:55,161,p20876,{eval.py:563},INFO,Running agent for test case: How do I get from Times Square to JFK Airport?...
+2026-04-05 22:41:55,161,p20876,{agent.py:109},INFO,Creating Strands agent with search, weather, and directions tools
+2026-04-05 22:41:55,161,p20876,{agent.py:82},INFO,Setting up Braintrust observability
+2026-04-05 22:41:55,162,p20876,{__init__.py:567},WARNING,Overriding of current TracerProvider is not allowed
+2026-04-05 22:41:55,162,p20876,{agent.py:98},INFO,Braintrust observability configured for project: project_name:simple-agent-evals
+2026-04-05 22:41:55,164,p20876,{agent.py:60},INFO,Loaded system prompt from /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/simple-agent-evals/prompts/system_prompt.txt (602 chars)
+2026-04-05 22:41:55,198,p20876,{agent.py:132},INFO,Agent created successfully
+2026-04-05 22:41:55,198,p20876,{eval.py:156},INFO,Running agent on: How do I get from Times Square to JFK Airport?...
+2026-04-05 22:41:55,843,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:41:55,938,p20876,{tools.py:230},INFO,[Tool] get_directions: 'Times Square, New York City' -> 'JFK Airport, New York City'
+2026-04-05 22:41:55,939,p20876,{tools.py:56},INFO,[Tool] Geocoding location: Times Square, New York City
+2026-04-05 22:41:55,984,p20876,{tools.py:75},INFO,[Tool] Geocoded 'Times Square, New York City' to: Times Square, Manhattan Community Board 5, Manhattan, New York County, New York, 10036, United States
+2026-04-05 22:41:56,985,p20876,{tools.py:56},INFO,[Tool] Geocoding location: JFK Airport, New York City
+2026-04-05 22:41:57,028,p20876,{tools.py:75},INFO,[Tool] Geocoded 'JFK Airport, New York City' to: John F. Kennedy International Airport, JFK Access Road, Queens, Queens County, New York, 11430, United States
+2026-04-05 22:42:07,295,p20876,{tools.py:283},ERROR,[Tool] get_directions failed: HTTPSConnectionPool(host='router.project-osrm.org', port=443): Read timed out. (read timeout=10)
+2026-04-05 22:42:07,990,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:42:11,255,p20876,{eval.py:167},INFO,Agent responded in 16.1s, tools used: ['get_directions']
+2026-04-05 22:42:11,256,p20876,{eval.py:563},INFO,Running agent for test case: What are the best practices for prompt engineering with larg...
+2026-04-05 22:42:11,256,p20876,{agent.py:109},INFO,Creating Strands agent with search, weather, and directions tools
+2026-04-05 22:42:11,256,p20876,{agent.py:82},INFO,Setting up Braintrust observability
+2026-04-05 22:42:11,257,p20876,{__init__.py:567},WARNING,Overriding of current TracerProvider is not allowed
+2026-04-05 22:42:11,257,p20876,{agent.py:98},INFO,Braintrust observability configured for project: project_name:simple-agent-evals
+2026-04-05 22:42:11,259,p20876,{agent.py:60},INFO,Loaded system prompt from /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/simple-agent-evals/prompts/system_prompt.txt (602 chars)
+2026-04-05 22:42:11,291,p20876,{agent.py:132},INFO,Agent created successfully
+2026-04-05 22:42:11,291,p20876,{eval.py:156},INFO,Running agent on: What are the best practices for prompt engineering with large language models?...
+2026-04-05 22:42:11,663,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:42:17,581,p20876,{eval.py:167},INFO,Agent responded in 6.3s, tools used: []
+2026-04-05 22:42:17,581,p20876,{eval.py:563},INFO,Running agent for test case: I am road tripping from Austin TX to Nashville TN. How far i...
+2026-04-05 22:42:17,581,p20876,{agent.py:109},INFO,Creating Strands agent with search, weather, and directions tools
+2026-04-05 22:42:17,581,p20876,{agent.py:82},INFO,Setting up Braintrust observability
+2026-04-05 22:42:17,582,p20876,{__init__.py:567},WARNING,Overriding of current TracerProvider is not allowed
+2026-04-05 22:42:17,582,p20876,{agent.py:98},INFO,Braintrust observability configured for project: project_name:simple-agent-evals
+2026-04-05 22:42:17,584,p20876,{agent.py:60},INFO,Loaded system prompt from /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/simple-agent-evals/prompts/system_prompt.txt (602 chars)
+2026-04-05 22:42:17,616,p20876,{agent.py:132},INFO,Agent created successfully
+2026-04-05 22:42:17,616,p20876,{eval.py:156},INFO,Running agent on: I am road tripping from Austin TX to Nashville TN. How far is the drive, what is...
+2026-04-05 22:42:17,976,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:42:19,046,p20876,{tools.py:230},INFO,[Tool] get_directions: 'Austin, TX' -> 'Nashville, TN'
+2026-04-05 22:42:19,046,p20876,{tools.py:56},INFO,[Tool] Geocoding location: Austin, TX
+2026-04-05 22:42:19,047,p20876,{tools.py:176},INFO,[Tool] get_weather: location='Nashville, TN'
+2026-04-05 22:42:19,047,p20876,{tools.py:56},INFO,[Tool] Geocoding location: Nashville, TN
+2026-04-05 22:42:19,049,p20876,{tools.py:148},INFO,[Tool] duckduckgo_search: query='must-see live music venues Nashville Tennessee', max_results=5
+2026-04-05 22:42:19,119,p20876,{tools.py:75},INFO,[Tool] Geocoded 'Nashville, TN' to: Nashville, Davidson County, Middle Tennessee, Tennessee, United States
+2026-04-05 22:42:19,125,p20876,{tools.py:75},INFO,[Tool] Geocoded 'Austin, TX' to: Austin, Travis County, Texas, United States
+2026-04-05 22:42:19,131,p20876,{lib.rs:404},INFO,response: https://grokipedia.com/api/typeahead?query=must-see+live+music+venues+Nashville+Tennessee&limit=1 200
+2026-04-05 22:42:19,151,p20876,{lib.rs:404},INFO,response: https://en.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=must-see%20live%20music%20venues%20Nashville%20Tennessee 200
+2026-04-05 22:42:19,236,p20876,{lib.rs:404},INFO,response: https://search.yahoo.com/search;_ylt=ZYXAtuaYZzEp0kTXIXB0VXWz;_ylu=Qj6TBtSCjU9kvx5_a2cCviryY97uRCmFP5IQgPt4tQ9Ito8?p=must-see+live+music+venues+Nashville+Tennessee 200
+2026-04-05 22:42:19,555,p20876,{tools.py:205},INFO,[Tool] get_weather: Nashville, TN -> 62.2F
+2026-04-05 22:42:20,126,p20876,{tools.py:56},INFO,[Tool] Geocoding location: Nashville, TN
+2026-04-05 22:42:20,168,p20876,{tools.py:75},INFO,[Tool] Geocoded 'Nashville, TN' to: Nashville, Davidson County, Middle Tennessee, Tennessee, United States
+2026-04-05 22:42:20,773,p20876,{lib.rs:404},INFO,response: https://search.brave.com/search?q=must-see+live+music+venues+Nashville+Tennessee&source=web 200
+2026-04-05 22:42:20,784,p20876,{tools.py:153},INFO,[Tool] duckduckgo_search: found 5 results
+2026-04-05 22:42:30,432,p20876,{tools.py:283},ERROR,[Tool] get_directions failed: HTTPSConnectionPool(host='router.project-osrm.org', port=443): Read timed out. (read timeout=10)
+2026-04-05 22:42:31,243,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:42:34,989,p20876,{eval.py:167},INFO,Agent responded in 17.4s, tools used: ['get_directions', 'get_weather', 'duckduckgo_search']
+2026-04-05 22:42:34,989,p20876,{eval.py:563},INFO,Running agent for test case: Book me a flight from Washington DC to London for next Frida...
+2026-04-05 22:42:34,990,p20876,{agent.py:109},INFO,Creating Strands agent with search, weather, and directions tools
+2026-04-05 22:42:34,990,p20876,{agent.py:82},INFO,Setting up Braintrust observability
+2026-04-05 22:42:34,991,p20876,{__init__.py:567},WARNING,Overriding of current TracerProvider is not allowed
+2026-04-05 22:42:34,991,p20876,{agent.py:98},INFO,Braintrust observability configured for project: project_name:simple-agent-evals
+2026-04-05 22:42:34,993,p20876,{agent.py:60},INFO,Loaded system prompt from /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/simple-agent-evals/prompts/system_prompt.txt (602 chars)
+2026-04-05 22:42:35,024,p20876,{agent.py:132},INFO,Agent created successfully
+2026-04-05 22:42:35,025,p20876,{eval.py:156},INFO,Running agent on: Book me a flight from Washington DC to London for next Friday....
+2026-04-05 22:42:35,404,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:42:35,407,p20876,{base_events.py:1821},ERROR,Task exception was never retrieved
+future: <Task finished name='Task-275' coro=<AsyncClient.aclose() done, defined at /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/streams/tls.py", line 241, in aclose
+    await self.transport_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1329, in aclose
+    self._transport.close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 1211, in close
+    super().close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2026-04-05 22:42:35,409,p20876,{base_events.py:1821},ERROR,Task exception was never retrieved
+future: <Task finished name='Task-276' coro=<AsyncClient.aclose() done, defined at /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/streams/tls.py", line 241, in aclose
+    await self.transport_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1329, in aclose
+    self._transport.close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 1211, in close
+    super().close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2026-04-05 22:42:35,412,p20876,{base_events.py:1821},ERROR,Task exception was never retrieved
+future: <Task finished name='Task-277' coro=<AsyncClient.aclose() done, defined at /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/streams/tls.py", line 241, in aclose
+    await self.transport_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1329, in aclose
+    self._transport.close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 1211, in close
+    super().close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2026-04-05 22:42:35,415,p20876,{base_events.py:1821},ERROR,Task exception was never retrieved
+future: <Task finished name='Task-278' coro=<AsyncClient.aclose() done, defined at /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/streams/tls.py", line 241, in aclose
+    await self.transport_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1329, in aclose
+    self._transport.close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 1211, in close
+    super().close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2026-04-05 22:42:35,420,p20876,{base_events.py:1821},ERROR,Task exception was never retrieved
+future: <Task finished name='Task-279' coro=<AsyncClient.aclose() done, defined at /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/streams/tls.py", line 241, in aclose
+    await self.transport_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1329, in aclose
+    self._transport.close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 1211, in close
+    super().close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2026-04-05 22:42:35,425,p20876,{base_events.py:1821},ERROR,Task exception was never retrieved
+future: <Task finished name='Task-280' coro=<AsyncClient.aclose() done, defined at /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/streams/tls.py", line 241, in aclose
+    await self.transport_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1329, in aclose
+    self._transport.close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 1211, in close
+    super().close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2026-04-05 22:42:35,431,p20876,{base_events.py:1821},ERROR,Task exception was never retrieved
+future: <Task finished name='Task-281' coro=<AsyncClient.aclose() done, defined at /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/streams/tls.py", line 241, in aclose
+    await self.transport_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1329, in aclose
+    self._transport.close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 1211, in close
+    super().close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Watch Logging**: Monitor inputs and outputs
+
+### 4. **Advanced Features**
+- **Inference Optimization**: Optimize how models run at scale
+- **Safety Features**: Built-in safety mechanisms for responsible AI
+- **Governance Tools**: Robust governance mechanisms for enterprise deployments
+- **Customization**: Adapt foundational models for specific business tasks
+
+## Common Use Cases:
+- Building chatbots and conversational AI
+- Content generation and summarization
+- Data analysis and insights
+- Image generation and processing
+- Enterprise generative AI applications
+
+Amazon Bedrock simplifies the process of leveraging cutting-edge AI models without the complexity of infrastructure management, making it ideal for enterprises looking to accelerate their generative AI adoption.I'll help you with that information. Let me get the driving directions, check the weather in Baltimore, and search for restaurants near the Inner Harbor.
+Tool #1: get_directions
+
+Tool #2: get_weather
+
+Tool #3: duckduckgo_search
+I was able to get some of the information for you, though the directions service experienced a timeout. Here's what I found:
+
+**Weather in Baltimore:**
+- **Temperature:** 57.4°F
+- **Wind Speed:** 6.8 mph
+- **Conditions:** Partly cloudy
+
+**Restaurants Near Inner Harbor:**
+There are plenty of excellent dining options at Baltimore's Inner Harbor! Here are some highlights:
+
+1. **Phillips Seafood Restaurant** - This is Baltimore's premiere restaurant for award-winning crab cakes and fresh seafood. It's located right on the famous Inner Harbor with views of the Seven Foot Knoll Lighthouse, and they offer lunch, dinner, happy hour, and private parties.
+
+2. There are approximately **360 restaurants** in and around the Inner Harbor area, offering diverse cuisines and price points that you can browse on OpenTable or Tripadvisor.
+
+3. The area offers everything from casual waterfront dining to upscale restaurants, many with views of the harbor.
+
+**Distance & Drive Time:**
+Unfortunately, the directions service timed out. However, based on general knowledge, Georgetown University in Washington DC to Baltimore Inner Harbor is typically around **40 miles** and takes approximately **50-60 minutes** by car, depending on traffic. I'd recommend using Google Maps or another navigation app for real-time traffic conditions before you leave.
+
+Is there anything else you'd like to know about your trip?
+Tool #1: get_weather
+The current temperature in Anchorage, Alaska is **37.5°F** (approximately 3°C).
+
+Additional weather details:
+- **Wind Speed:** 5.4 mph
+- **Conditions:** Partly cloudy
+Tool #1: get_directions
+I apologize for the technical difficulty with the directions service. Let me provide you with helpful information about getting from Times Square to JFK Airport:
+
+**Travel Options:**
+
+1. **Public Transportation (Recommended)**
+   - **AirTrain + Subway**: Take the subway (A, C, or E line) from Times Square to Jamaica Station, then transfer to the AirTrain, which takes you directly to JFK terminals
+   - **Time**: Approximately 45-60 minutes depending on traffic and connections
+   - **Cost**: Relatively inexpensive (around $8-10)
+
+2. **Taxi or Ride-Share (Uber/Lyft)**
+   - **Time**: 45-75 minutes depending on traffic (NYC traffic can be heavy)
+   - **Cost**: $50-100+ depending on surge pricing and exact time of day
+
+3. **Car Service/Private Car**
+   - **Time**: Similar to taxi/rideshare, 45-75 minutes
+   - **Cost**: $60-150+
+
+4. **Hotel Shuttle Services**
+   - If staying at a hotel near Times Square, they may offer shuttle services to JFK
+
+**Recommended Route:**
+The AirTrain + Subway combination is typically the most reliable and cost-effective option, as it avoids unpredictable traffic delays. Just allow extra time during rush hours.
+
+Would you like more specific information about any of these options?# Best Practices for Prompt Engineering with Large Language Models
+
+Prompt engineering is a crucial skill for getting the best results from LLMs. Here are the key best practices:
+
+## 1. **Be Clear and Specific**
+- Use precise language and avoid ambiguity
+- Specify the format you want (e.g., "in a bulleted list," "as a JSON object")
+- Include relevant context and constraints
+
+## 2. **Provide Examples (Few-Shot Prompting)**
+- Include 1-3 examples of the desired input-output format
+- This helps the model understand the pattern you're looking for
+- More effective than zero-shot for complex tasks
+
+## 3. **Use Role-Playing**
+- Assign a persona: "You are an expert Python developer..."
+- "Act as a business consultant..."
+- This primes the model to respond in a specific style
+
+## 4. **Break Down Complex Tasks**
+- Use step-by-step instructions for complicated requests
+- Ask the model to "think through this step by step"
+- Chain-of-thought prompting improves reasoning
+
+## 5. **Set Temperature and Parameters Appropriately**
+- Lower temperature (0.1-0.3) for factual, deterministic tasks
+- Higher temperature (0.7-1.0) for creative work
+- Adjust max tokens based on expected response length
+
+## 6. **Use Delimiters Clearly**
+- Use markers like `---`, `"""`, or `<>` to separate sections
+- This prevents prompt injection and clarifies structure
+- Example: "Use the text between <text> tags..."
+
+## 7. **Specify Output Format Explicitly**
+- "Output as a markdown table"
+- "Respond in JSON format"
+- "Use numbered points"
+
+## 8. **Iterate and Refine**
+- Test multiple versions of prompts
+- Analyze what works and what doesn't
+- Small changes can significantly impact results
+
+## 9. **Use Constraints and Limitations**
+- "Keep your response to 150 words"
+- "Avoid mentioning X"
+- "Write for a 5th-grade audience"
+
+## 10. **Ask for Reasoning**
+- "Explain your thinking"
+- "What are the pros and cons?"
+- "What assumptions are you making?"
+
+## 11. **Avoid Common Pitfalls**
+- ❌ Don't be vague ("Tell me about X")
+- ❌ Don't ask multiple unrelated questions in one prompt
+- ❌ Don't ignore previous responses in multi-turn conversations
+- ❌ Don't expect perfect accuracy without verification
+
+## 12. **Test and Validate**
+- Verify factual claims independently
+- Check if outputs meet your quality standards
+- Adjust prompts based on results
+
+Would you like me to search for the latest developments in prompt engineering techniques or help you craft a specific prompt?I'll help you with your road trip! Let me get the driving distance and weather information for you, and then search for must-see live music venues in Nashville.
+Tool #1: get_directions
+
+Tool #2: get_weather
+
+Tool #3: duckduckgo_search
+Great! Here's what I found for your Nashville road trip:
+
+**Weather in Nashville:**
+It's currently **62.2°F** with **11.2 mph winds** - pleasant late fall/early winter conditions. You might want to bring a light jacket!
+
+**Must-See Live Music Venues in Nashville:**
+
+1. **Grand Ole Opry** - The iconic venue that needs to be on any Nashville music lover's list
+2. **Ryman Auditorium** - Another legendary historic venue
+3. **Station Inn** - A historic spot in The Gulch known as a truly authentic Nashville experience
+4. **The Listening Room Cafe** - A great intimate singer-songwriter venue
+5. **The Basement East ("The Beast")** - Located in Five Points, this smaller venue punches above its weight, hosting surprisingly big acts with a cozy living room-themed VIP section
+6. **Rudy's** - A jazz-centric venue with an intimate, cozy setting
+7. **Sid Gold's Request Room** - A piano karaoke bar and live music lounge
+
+The search results highlight that Nashville has an incredibly diverse music scene, from big iconic venues to intimate songwriter spots, honky-tonks, and jazz clubs. Broadway and the area South of Broadway (SoBro) are particularly vibrant for live music.
+
+Unfortunately, I had a technical issue getting the exact driving distance and time, but Austin to Nashville is typically around **10-11 hours of driving** (approximately 600-650 miles depending on your route). Safe travels, and enjoy the music!I appreciate the request, but I don't have access to a flight booking tool. My available tools are limited to:
+
+1. **Search** - for finding information online
+2. **Weather2026-04-05 22:42:37,934,p20876,{eval.py:167},INFO,Agent responded in 2.9s, tools used: []
+2026-04-05 22:42:37,934,p20876,{eval.py:563},INFO,Running agent for test case: Send an email to my boss telling him I will be late to the m...
+2026-04-05 22:42:37,934,p20876,{agent.py:109},INFO,Creating Strands agent with search, weather, and directions tools
+2026-04-05 22:42:37,934,p20876,{agent.py:82},INFO,Setting up Braintrust observability
+2026-04-05 22:42:37,935,p20876,{__init__.py:567},WARNING,Overriding of current TracerProvider is not allowed
+2026-04-05 22:42:37,935,p20876,{agent.py:98},INFO,Braintrust observability configured for project: project_name:simple-agent-evals
+2026-04-05 22:42:37,937,p20876,{agent.py:60},INFO,Loaded system prompt from /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/simple-agent-evals/prompts/system_prompt.txt (602 chars)
+2026-04-05 22:42:37,969,p20876,{agent.py:132},INFO,Agent created successfully
+2026-04-05 22:42:37,969,p20876,{eval.py:156},INFO,Running agent on: Send an email to my boss telling him I will be late to the meeting tomorrow....
+2026-04-05 22:42:38,287,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:42:40,955,p20876,{eval.py:167},INFO,Agent responded in 3.0s, tools used: []
+2026-04-05 22:42:40,955,p20876,{eval.py:563},INFO,Running agent for test case: What was the closing price of Apple stock yesterday?...
+2026-04-05 22:42:40,955,p20876,{agent.py:109},INFO,Creating Strands agent with search, weather, and directions tools
+2026-04-05 22:42:40,955,p20876,{agent.py:82},INFO,Setting up Braintrust observability
+2026-04-05 22:42:40,957,p20876,{__init__.py:567},WARNING,Overriding of current TracerProvider is not allowed
+2026-04-05 22:42:40,957,p20876,{agent.py:98},INFO,Braintrust observability configured for project: project_name:simple-agent-evals
+2026-04-05 22:42:40,959,p20876,{agent.py:60},INFO,Loaded system prompt from /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/simple-agent-evals/prompts/system_prompt.txt (602 chars)
+2026-04-05 22:42:40,990,p20876,{agent.py:132},INFO,Agent created successfully
+2026-04-05 22:42:40,990,p20876,{eval.py:156},INFO,Running agent on: What was the closing price of Apple stock yesterday?...
+2026-04-05 22:42:40,995,p20876,{base_events.py:1821},ERROR,Task exception was never retrieved
+future: <Task finished name='Task-294' coro=<AsyncClient.aclose() done, defined at /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/streams/tls.py", line 241, in aclose
+    await self.transport_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1329, in aclose
+    self._transport.close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 1211, in close
+    super().close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2026-04-05 22:42:41,410,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:42:41,866,p20876,{tools.py:148},INFO,[Tool] duckduckgo_search: query='Apple AAPL stock closing price yesterday', max_results=5
+2026-04-05 22:42:41,956,p20876,{lib.rs:404},INFO,response: https://grokipedia.com/api/typeahead?query=Apple+AAPL+stock+closing+price+yesterday&limit=1 200
+2026-04-05 22:42:41,958,p20876,{lib.rs:404},INFO,response: https://en.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=Apple%20AAPL%20stock%20closing%20price%20yesterday 200
+2026-04-05 22:42:42,727,p20876,{lib.rs:404},INFO,response: https://yandex.com/search/site/?text=Apple+AAPL+stock+closing+price+yesterday&web=1&searchid=6975872 200
+2026-04-05 22:42:42,749,p20876,{tools.py:153},INFO,[Tool] duckduckgo_search: found 5 results
+2026-04-05 22:42:43,368,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:42:44,223,p20876,{tools.py:148},INFO,[Tool] duckduckgo_search: query='Apple AAPL stock price today 2024', max_results=5
+2026-04-05 22:42:44,318,p20876,{lib.rs:404},INFO,response: https://grokipedia.com/api/typeahead?query=Apple+AAPL+stock+price+today+2024&limit=1 200
+2026-04-05 22:42:44,394,p20876,{lib.rs:404},INFO,response: https://en.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=Apple%20AAPL%20stock%20price%20today%202024 200
+2026-04-05 22:42:44,444,p20876,{ddgs.py:198},INFO,Error in engine yahoo: DDGSException("RequestError: RequestError('error sending request for url (https://search.yahoo.com/search;_ylt=BBGD0SgpdQVR9aLMl82z9xfl;_ylu=iEDlgI9xvjHw99-_Uqx6LUFa7riuhfWyZY7K63O2-Y0XM0Y?p=Apple+AAPL+stock+price+today+2024)', 'https://search.yahoo.com/search;_ylt=BBGD0SgpdQVR9aLMl82z9xfl;_ylu=iEDlgI9xvjHw99-_Uqx6LUFa7riuhfWyZY7K63O2-Y0XM0Y?p=Apple+AAPL+stock+price+today+2024')")
+2026-04-05 22:42:45,018,p20876,{lib.rs:404},INFO,response: https://search.brave.com/search?q=Apple+AAPL+stock+price+today+2024&source=web 200
+2026-04-05 22:42:45,030,p20876,{tools.py:153},INFO,[Tool] duckduckgo_search: found 5 results
+2026-04-05 22:42:45,673,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:42:47,846,p20876,{eval.py:167},INFO,Agent responded in 6.9s, tools used: ['duckduckgo_search']
+2026-04-05 22:42:47,846,p20876,{eval.py:563},INFO,Running agent for test case: Order me a pepperoni pizza from Dominos to 1600 Pennsylvania...
+2026-04-05 22:42:47,846,p20876,{agent.py:109},INFO,Creating Strands agent with search, weather, and directions tools
+2026-04-05 22:42:47,846,p20876,{agent.py:82},INFO,Setting up Braintrust observability
+2026-04-05 22:42:47,848,p20876,{__init__.py:567},WARNING,Overriding of current TracerProvider is not allowed
+2026-04-05 22:42:47,848,p20876,{agent.py:98},INFO,Braintrust observability configured for project: project_name:simple-agent-evals
+2026-04-05 22:42:47,850,p20876,{agent.py:60},INFO,Loaded system prompt from /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/simple-agent-evals/prompts/system_prompt.txt (602 chars)
+2026-04-05 22:42:47,902,p20876,{agent.py:132},INFO,Agent created successfully
+2026-04-05 22:42:47,903,p20876,{eval.py:156},INFO,Running agent on: Order me a pepperoni pizza from Dominos to 1600 Pennsylvania Avenue....
+2026-04-05 22:42:48,249,p20876,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-05 22:42:50,205,p20876,{eval.py:167},INFO,Agent responded in 2.3s, tools used: []
+** - for checking weather conditions
+3. **Directions** - for getting driving directions and travel times
+
+To book a flight from Washington DC to London for next Friday, I recommend using:
+
+- **Airlines directly**: United, British Airways, Virgin Atlantic, American Airlines, etc.
+- **Travel booking sites**: 
+  - Kayak.com
+  - Expedia.com
+  - Google Flights
+  - Skyscanner.com
+  - Travelocity.com
+
+These platforms allow you to:
+- Compare prices across multiple airlines
+- Filter by departure time, number of stops, and other preferences
+- See available seat options
+- Book and pay directly
+
+Would you like me to search for current flight information or pricing for DC to London flights instead? Or would you like help with other travel planning, such as weather information for London or directions from your home to the airport?I don't have the ability to send emails. I can only help with:
+
+1. **Searching for information** (using DuckDuckGo)
+2. **Checking weather** for any location
+3. **Getting driving directions** and travel times between places
+
+To notify your boss that you'll be late to tomorrow's meeting, you'll need to:
+
+- **Send an email directly** through your email client (Gmail, Outlook, etc.)
+- **Send a message** through your company's communication platform (Slack, Teams, etc.)
+- **Call or text** your boss directly
+- **Use your calendar app** to send an update to meeting attendees
+
+If you'd like, I can help you with:
+- **Getting directions** to your meeting location to estimate how late you might be
+- **Checking the weather** for tomorrow to help explain why you might be delayed
+- **Searching for information** if you need help drafting your message
+
+Would any of these be helpful?I'll search for Apple's stock closing price from yesterday.
+Tool #1: duckduckgo_search
+The search results show links to financial websites, but don't display the specific closing price. Let me try a more specific search to get today's actual price data.
+Tool #2: duckduckgo_search
+Based on the search results, I found some recent stock price information for Apple (AAPL):
+
+According to the most recent data I found:
+- **Apple stock is trading around $253.68** (from Kraken, 3 days ago)
+- Another source shows **$255.45** (from Robinhood, 3 days ago)
+
+However, I should note that these results are a few days old based on when they were indexed. To get the exact closing price from yesterday specifically, I'd recommend checking real-time financial websites directly such as:
+- **Yahoo Finance** (finance.yahoo.com)
+- **Google Finance** (google.com/finance)
+- **NASDAQ** (nasdaq.com)
+- **CNBC** (cnbc.com)
+
+These sites provide up-to-the-minute stock data and historical prices. The closing price can vary depending on which exact day you're referring to, as the stock market is closed on weekends and holidays.I appreciate the request, but I don't have the ability to place food orders or make purchases. My available tools are limited to:
+
+1. **Searching the web** - for information and news
+2. **Checking weather** - for current conditions
+3. **Getting directions** - for travel routes and distances
+
+To order a pepperoni pizza from Domino's, you would need to:
+
+- **Visit Domino's website** (dominos.com) or their mobile app
+- **Call your local Domino's** store directly
+- **Use a food delivery app** like DoorDash, Uber Eats, or Grubhub
+
+You can search for the nearest Domino's location to 1600 Pennsylvania Avenue (Washington, DC) through any of these methods, and they'll handle the order for you. Would you like me to search for Domino's locations in Washington, DC instead?simple-agent-evals (data): 0it [00:00, ?it/s]simple-agent-evals (data): 25it [00:00, 76931.47it/s]
+simple-agent-evals (tasks):   0%|          | 0/25 [00:00<?, ?it/s]2026-04-05 22:42:50,239,p20876,{base_events.py:1821},ERROR,Task exception was never retrieved
+future: <Task finished name='Task-337' coro=<AsyncClient.aclose() done, defined at /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/streams/tls.py", line 241, in aclose
+    await self.transport_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1329, in aclose
+    self._transport.close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 1211, in close
+    super().close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2026-04-05 22:42:57,401,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:43:04,976,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:43:11,765,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:43:15,001,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:43:16,871,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:43:20,747,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:43:24,682,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:43:29,096,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:43:33,546,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:43:37,587,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:43:50,377,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:43:59,273,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:44:01,199,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:44:04,350,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:44:07,319,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:44:07,758,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:44:11,978,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:44:17,653,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:44:19,253,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:44:24,541,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:44:26,866,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:44:33,518,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:44:36,772,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:44:42,112,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:44:42,388,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:44:49,570,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:44:49,743,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:44:54,512,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:44:57,311,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:45:02,919,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:45:21,966,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:45:30,905,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:45:33,106,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:45:38,052,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:45:41,309,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:45:43,796,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:45:50,250,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:45:57,962,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:45:58,914,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:46:07,598,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:46:08,638,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:46:13,978,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:46:17,167,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:46:18,831,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:46:19,250,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:46:24,099,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:46:25,691,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:46:31,870,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-05 22:46:31,881,p20876,{base_events.py:1821},ERROR,Task exception was never retrieved
+future: <Task finished name='Task-513' coro=<AsyncClient.aclose() done, defined at /home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/streams/tls.py", line 241, in aclose
+    await self.transport_stream.aclose()
+  File "/home/ubuntu/dsan6725/spring-2026-lab10-RX67-RX67/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1329, in aclose
+    self._transport.close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 1211, in close
+    super().close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Found exceptions for the following scorers: Factuality [TypeError("object ChatCompletion can't be used in 'await' expression")]
+Found exceptions for the following scorers: Factuality [TypeError("object ChatCompletion can't be used in 'await' expression")]
+Found exceptions for the following scorers: Factuality [TypeError("object ChatCompletion can't be used in 'await' expression")]
+Found exceptions for the following scorers: Factuality [TypeError("object ChatCompletion can't be used in 'await' expression")]
+Found exceptions for the following scorers: Factuality [TypeError("object ChatCompletion can't be used in 'await' expression")]
+Found exceptions for the following scorers: Factuality [TypeError("object ChatCompletion can't be used in 'await' expression")]
+Found exceptions for the following scorers: Factuality [TypeError("object ChatCompletion can't be used in 'await' expression")]
+Found exceptions for the following scorers: Factuality [TypeError("object ChatCompletion can't be used in 'await' expression")]
+Found exceptions for the following scorers: Factuality [TypeError("object ChatCompletion can't be used in 'await' expression")]
+Found exceptions for the following scorers: Factuality [TypeError("object ChatCompletion can't be used in 'await' expression")]
+Found exceptions for the following scorers: Factuality [TypeError("object ChatCompletion can't be used in 'await' expression")]
+Found exceptions for the following scorers: Factuality [TypeError("object ChatCompletion can't be used in 'await' expression")]
+Found exceptions for the following scorers: Factuality [TypeError("object ChatCompletion can't be used in 'await' expression")]
+Found exceptions for the following scorers: Factuality [TypeError("object ChatCompletion can't be used in 'await' expression")]
+Found exceptions for the following scorers: Factuality [TypeError("object ChatCompletion can't be used in 'await' expression")]
+Found exceptions for the following scorers: Factuality [TypeError("object ChatCompletion can't be used in 'await' expression")]
+Found exceptions for the following scorers: Factuality [TypeError("object ChatCompletion can't be used in 'await' expression")]
+Found exceptions for the following scorers: Factuality [TypeError("object ChatCompletion can't be used in 'await' expression")]
+Found exceptions for the following scorers: Factuality [TypeError("object ChatCompletion can't be used in 'await' expression")]
+Found exceptions for the following scorers: Factuality [TypeError("object ChatCompletion can't be used in 'await' expression")]
+Found exceptions for the following scorers: Factuality [TypeError("object ChatCompletion can't be used in 'await' expression")]
+Found exceptions for the following scorers: Factuality [TypeError("object ChatCompletion can't be used in 'await' expression")]
+Found exceptions for the following scorers: Factuality [TypeError("object ChatCompletion can't be used in 'await' expression")]
+simple-agent-evals (tasks):   4%|▍         | 1/25 [03:41<1:28:41, 221.75s/it]2026-04-05 22:46:37,415,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+Found exceptions for the following scorers: Factuality [TypeError("object ChatCompletion can't be used in 'await' expression")]
+2026-04-05 22:46:39,827,p20876,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+Found exceptions for the following scorers: Factuality [TypeError("object ChatCompletion can't be used in 'await' expression")]
+simple-agent-evals (tasks):  96%|█████████▌| 24/25 [03:49<00:06,  6.88s/it]  simple-agent-evals (tasks): 100%|██████████| 25/25 [03:49<00:00,  9.18s/it]
+2026-04-05 22:46:44,137,p20876,{logger.py:4003},WARNING,Failed to fetch experiment scores and metrics: {"Code":"InternalServerError","InternalTraceId":"69d2e6500000000079349ef6c9d38686","Path":"/experiment-comparison2","Service":"api"}
+
+View complete results in Braintrust or run experiment.summarize() again.
+2026-04-05 22:46:44,138,p20876,{eval.py:696},INFO,Eval summary: 25 cases, 0 errors, scorers: ClosedQA=60.00%, Latency=87.00%, NoError=100.00%, ResponseCompleteness=91.67%, ScopeAwareness=84.00%, ToolSelection=99.50%
+2026-04-05 22:46:44,140,p20876,{eval.py:806},INFO,Evaluation metrics exported to eval_metrics.json
+2026-04-05 22:46:44,140,p20876,{eval.py:935},INFO,Evaluation completed in 8 minutes and 5.8 seconds
+
+=========================SUMMARY=========================
+main-1775428719 compared to main-1775428228:
+See results for main-1775428719 at https://www.braintrust.dev/app/gu/p/simple-agent-evals/experiments/main-1775428719
+
+================================================================================
+EVALUATION SUMMARY
+================================================================================
+Total test cases: 25
+Errors: 0
+
+--------------------------------------------------------------------------------
+Scorer                          Avg Score      Min      Max    Count
+--------------------------------------------------------------------------------
+ClosedQA                           60.00%     0.00     1.00       25
+Latency                            87.00%     0.25     1.00       25
+NoError                           100.00%     1.00     1.00       25
+ResponseCompleteness               91.67%     0.00     1.00       21
+ScopeAwareness                     84.00%     0.00     1.00       25
+ToolSelection                      99.50%     0.90     1.00       20
+
+--------------------------------------------------------------------------------
+PER-CATEGORY BREAKDOWN
+--------------------------------------------------------------------------------
+
+  [directions]
+    ClosedQA                       20.00%  (5 cases)
+    Latency                        65.00%  (5 cases)
+    NoError                       100.00%  (5 cases)
+    ResponseCompleteness          100.00%  (5 cases)
+    ScopeAwareness                100.00%  (5 cases)
+    ToolSelection                 100.00%  (5 cases)
+
+  [multi_tool]
+    ClosedQA                       66.67%  (6 cases)
+    Latency                        75.00%  (6 cases)
+    NoError                       100.00%  (6 cases)
+    ResponseCompleteness           87.50%  (6 cases)
+    ScopeAwareness                 50.00%  (6 cases)
+    ToolSelection                  98.33%  (6 cases)
+
+  [out_of_scope]
+    ClosedQA                      100.00%  (4 cases)
+    Latency                       100.00%  (4 cases)
+    NoError                       100.00%  (4 cases)
+    ScopeAwareness                 75.00%  (4 cases)
+    ToolSelection                 100.00%  (1 cases)
+
+  [search]
+    ClosedQA                       80.00%  (5 cases)
+    Latency                       100.00%  (5 cases)
+    NoError                       100.00%  (5 cases)
+    ResponseCompleteness          100.00%  (5 cases)
+    ScopeAwareness                100.00%  (5 cases)
+    ToolSelection                 100.00%  (3 cases)
+
+  [weather]
+    ClosedQA                       40.00%  (5 cases)
+    Latency                       100.00%  (5 cases)
+    NoError                       100.00%  (5 cases)
+    ResponseCompleteness           80.00%  (5 cases)
+    ScopeAwareness                100.00%  (5 cases)
+    ToolSelection                 100.00%  (5 cases)
+
+================================================================================
+
